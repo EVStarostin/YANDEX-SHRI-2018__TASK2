@@ -1,0 +1,141 @@
+body {
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+}
+
+.wrapper {
+    max-width: 1366px;
+    margin: 0 auto;
+
+}
+
+header {
+    padding: 20px 40px 20px 30px;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+header .logo {
+    display: inline-block;
+    padding: 10px;
+}
+
+header .logo img {
+    vertical-align: middle;
+}
+
+header nav {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 30px;
+}
+
+header .menu {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+header .menu li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+header .menu li a {
+    display: block;
+    opacity: 0.6;
+    font-size: 16px;
+    color: #333333;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 10px;
+    line-height: 27px;
+}
+
+header .menu li a:hover {
+    opacity: 1;
+}
+
+header .menu li .active {
+    opacity: 1;
+}
+
+main {
+    padding: 30px 40px;
+}
+
+main h2 {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+main {
+    font-size: 0;
+}
+
+main section {
+    font-size: 14px;
+    display: inline-block;
+    width: 49%;
+    /*    height: 330px;*/
+    box-sizing: border-box;
+}
+
+main section:nth-child(even) {
+    margin-left: 2%;
+}
+
+main section .block-main {
+    /*    border: 1px solid #333;*/
+    border-radius: 20px;
+    height: 330px;
+    background: #ececea url(img/bg@2x.png) no-repeat center;
+    background-size: cover;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+main section .block-main p {
+    margin: 0;
+}
+
+main section .block-main h3 {
+    font-size: 27px;
+    color: #333333;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+main section .block-main .info {
+    color: #333333;
+    margin-bottom: 25px;
+}
+
+.block-main .temp-block {
+    display: inline-block;
+}
+
+.block-main .temp-block:first-of-type {
+    margin-right: 15px;
+}
+
+.temp-block .place {
+    color: #858585;
+    margin-bottom: 4px;
+}
+
+.temp-block .temp {
+    font-weight: 700;
+    font-size: 36px;
+    color: #333333;
+}
+
+.block-main .rain-icon {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background: url(img/cloud-drizzle@2x.png) no-repeat;
+    background-size: 100%;
+    margin-left: 3px;
+}

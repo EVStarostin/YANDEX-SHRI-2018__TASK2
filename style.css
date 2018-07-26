@@ -21,6 +21,7 @@ header .logo {
 
 header .logo img {
     vertical-align: middle;
+    width: 50%;
 }
 
 header nav {
@@ -86,13 +87,14 @@ main section:nth-child(even) {
 }
 
 main section .block-main {
-    /*    border: 1px solid #333;*/
     border-radius: 20px;
     height: 330px;
     background: #ececea url(img/bg@2x.png) no-repeat center;
     background-size: cover;
     padding: 25px;
     box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 }
 
 main section .block-main p {
@@ -138,4 +140,24 @@ main section .block-main .info {
     background: url(img/cloud-drizzle@2x.png) no-repeat;
     background-size: 100%;
     margin-left: 3px;
+}
+
+.tech-block {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    transition: margin 0.3s ease-out
+}
+
+.tech-block li {
+    width: 200px;
+    height: 120px;
+    background-color: #f7f7f7;
+    margin: 15px;
+    border-radius: 20px;
+    padding: 15px;
+    box-sizing: border-box;
 }

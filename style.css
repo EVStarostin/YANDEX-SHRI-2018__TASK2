@@ -159,5 +159,34 @@ main section .block-main .info {
     margin: 15px;
     border-radius: 20px;
     padding: 15px;
+    padding-top: 40px;
     box-sizing: border-box;
+}
+
+.block-main .control {
+    position: absolute;
+    border: none;
+    right: 105px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    opacity: 0.6;
+}
+
+.block-main .control.bottom {
+    bottom: 0;
+    background: #f7f7f7 url('img/Icons/Arrow Double/M@2x.png') no-repeat center;
+    background-size: 50%;
+}
+
+.block-main .control.top {
+    top: 0;
+    background: #f7f7f7 url('img/Icons/Arrow Double/M@2x.png') no-repeat center;
+    background-size: 50%;
+    transform: rotate(180deg);
+    visibility: hidden;
+}
+
+.block-main .control:hover {
+    opacity: 1;
 }

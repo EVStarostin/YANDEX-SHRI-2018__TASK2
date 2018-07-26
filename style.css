@@ -95,6 +95,7 @@ main section .block-main {
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+    padding-right: 230px;
 }
 
 main section .block-main p {

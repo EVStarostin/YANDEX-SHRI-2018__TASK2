@@ -336,6 +336,8 @@ footer .links {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 footer .links li:not(:last-child) {
@@ -423,5 +425,8 @@ footer .copyright p {
 
     .scenarios li:not(:last-child) button {
         margin-right: 20px;
+    }
+    footer .wrapper {
+        flex-direction: column;
     }
 }

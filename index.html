@@ -16,91 +16,105 @@
 </head>
 
 <body>
-    <header>
-        <div class="wrapper">
-            <a class="logo" href="#">
+    <div class="header-and-main">
+        <header>
+            <div class="wrapper">
+                <a class="logo" href="#">
                 <img src="img/logo.svg" alt="Логотип Яндекса">
             </a>
-            <nav>
-                <ul class="menu">
-                    <li><a class="active" href="#">Сводка</a></li>
-                    <li><a href="#">Устройства</a></li>
-                    <li><a href="#">Сценарии</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <div class="wrapper">
-            <div class="main-and-fav">
-                <section class="main-section">
-                    <h2 class="section-header">Главное</h2>
-                    <div class="status-block">
-                        <div class="info">
-                            <h3>Привет, Геннадий!</h3>
-                            <p>Двери и окна закрыты, сигнализация включена.</p>
-                            <div class="temperature-wrapper">
-                                <div class="temp-at-home">
-                                    <p class="label">Дома</p>
-                                    <p class="temp">+23</p>
-                                </div>
-                                <div class="temp-outside">
-                                    <p class="label">За окном</p>
-                                    <p class="temp">+19</p>
+                <nav>
+                    <ul class="menu">
+                        <li><a class="active" href="#">Сводка</a></li>
+                        <li><a href="#">Устройства</a></li>
+                        <li><a href="#">Сценарии</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="wrapper">
+                <div class="main-and-fav">
+                    <section class="main-section">
+                        <h2 class="section-header">Главное</h2>
+                        <div class="status-block">
+                            <div class="info">
+                                <h3>Привет, Геннадий!</h3>
+                                <p>Двери и окна закрыты, сигнализация включена.</p>
+                                <div class="temperature-wrapper">
+                                    <div class="temp-at-home">
+                                        <p class="label">Дома</p>
+                                        <p class="temp">+23</p>
+                                    </div>
+                                    <div class="temp-outside">
+                                        <p class="label">За окном</p>
+                                        <p class="temp">+19</p>
+                                    </div>
                                 </div>
                             </div>
+                            <div id="carousel" class="carousel">
+                                <button class="arrow prev"></button>
+                                <ul class="devices">
+                                    <li class="icon_temp">
+                                        <p class="label">Philips Cooler</p>
+                                        <p class="action">Начнет охлаждать в 16:30</p>
+                                    </li>
+                                    <li class="icon_sun">
+                                        <p class="label">Xiaomi Yeelight LED Smart Bulb</p>
+                                        <p class="action">Включится в 17:00</p>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <button class="arrow next"></button>
+                            </div>
                         </div>
-                        <div id="carousel" class="carousel">
-                            <button class="arrow prev"></button>
-                            <ul class="devices">
-                                <li class="icon_temp">
-                                    <p class="label">Philips Cooler</p>
-                                    <p class="action">Начнет охлаждать в 16:30</p>
-                                </li>
-                                <li class="icon_sun">
-                                    <p class="label">Xiaomi Yeelight LED Smart Bulb</p>
-                                    <p class="action">Включится в 17:00</p>
-                                </li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                    </section>
+                    <section class="fav-section">
+                        <div class="header-and-controls">
+                            <h2 class="section-header">Избранные сценарии</h2>
+                            <div class="controls">
+                                <button class="arrow prev"></button>
+                                <button class="arrow next"></button>
+                            </div>
+                        </div>
+                        <div id="slider-fav" class="slider-fav">
+                            <ul class="scenarios">
+                                <li><button>1</button></li>
+                                <li><button>2</button></li>
+                                <li><button>3</button></li>
+                                <li><button>4</button></li>
+                                <li><button>5</button></li>
+                                <li><button>6</button></li>
+                                <li><button>7</button></li>
+                                <li><button>8</button></li>
+                                <li><button>9</button></li>
+                                <li><button>10</button></li>
+                                <li><button>11</button></li>
+                                <li><button>12</button></li>
+                                <li><button>13</button></li>
+                                <li><button>14</button></li>
+                                <li><button>15</button></li>
                             </ul>
-                            <button class="arrow next"></button>
                         </div>
-                    </div>
-                </section>
-                <section class="fav-section">
-                    <div class="header-and-controls">
-                        <h2 class="section-header">Избранные сценарии</h2>
-                        <div class="controls">
-                            <button class="arrow prev"></button>
-                            <button class="arrow next"></button>
-                        </div>
-                    </div>
-                    <div id="slider-fav" class="slider-fav">
-                        <ul class="scenarios">
-                            <li><button>1</button></li>
-                            <li><button>2</button></li>
-                            <li><button>3</button></li>
-                            <li><button>4</button></li>
-                            <li><button>5</button></li>
-                            <li><button>6</button></li>
-                            <li><button>7</button></li>
-                            <li><button>8</button></li>
-                            <li><button>9</button></li>
-                            <li><button>10</button></li>
-                            <li><button>11</button></li>
-                            <li><button>12</button></li>
-                            <li><button>13</button></li>
-                            <li><button>14</button></li>
-                            <li><button>15</button></li>
-                        </ul>
-                    </div>
-                </section>
+                    </section>
+                </div>
             </div>
-
+        </main>
+    </div>
+    <footer>
+        <div class="wrapper">
+            <ul class="links">
+                <li><a href="#">Помощь</a></li>
+                <li><a href="#">Обратная связь</a></li>
+                <li><a href="#">Разработчикам</a></li>
+                <li><a href="#">Условия использования</a></li>
+            </ul>
+            <div class="copyright">
+                <p>© 2001–2017 ООО «Яндекс»</p>
+            </div>
         </div>
-    </main>
+    </footer>
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>

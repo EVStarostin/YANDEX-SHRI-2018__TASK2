@@ -363,12 +363,6 @@ footer .copyright p {
     color: #858585;
 }
 
-@media screen and (max-width: 1312px) {
-    .scenarios {
-        justify-content: space-around;
-    }   
-}
-
 @media screen and (max-width: 991px) {
     header .wrapper,
     main .wrapper,
@@ -432,6 +426,12 @@ footer .copyright p {
         overflow-x: scroll;
     }
 
+/*
+    .devices::-webkit-scrollbar {
+        display: none;
+    }
+*/
+
     .devices li {
         margin-left: 20px;
     }
@@ -455,6 +455,12 @@ footer .copyright p {
         flex-wrap: nowrap;
         overflow-x: scroll;
     }
+    
+/*
+    .scenarios::-webkit-scrollbar {
+        display: none;
+    }
+*/
 
     .scenarios li:not(:last-child) button {
         margin-right: 20px;

@@ -363,6 +363,12 @@ footer .copyright p {
     color: #858585;
 }
 
+@media screen and (max-width: 1312px) {
+    .scenarios {
+        justify-content: space-around;
+    }   
+}
+
 @media screen and (max-width: 991px) {
     header .wrapper,
     main .wrapper,

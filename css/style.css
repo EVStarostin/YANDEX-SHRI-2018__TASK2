@@ -7,6 +7,7 @@ body {
     max-width: 1366px;
     margin: 0 auto;
     align-items: center;
+    box-sizing: border-box;
 }
 
 header {
@@ -53,17 +54,20 @@ nav {
     opacity: 1;
 }
 
-main {
+main .wrapper {
     padding: 30px 40px;
 }
 
 .main-and-fav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .main-and-fav section {
     width: 49%;
+    min-width: 438px;
+    margin-bottom: 30px;
 }
 
 .section-header {
@@ -71,6 +75,7 @@ main {
     color: #333333;
     font-weight: 700;
     margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .status-block {
@@ -78,9 +83,15 @@ main {
     background: #f1edea url(../img/bg.png) no-repeat center;
     background-size: cover;
     border-radius: 20px;
-    padding: 25px;
+    padding: 0 20px 0 25px;
     box-sizing: border-box;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.status-block .info {
+    padding-top: 25px;
 }
 
 .status-block h3 {
@@ -95,22 +106,251 @@ main {
     margin: 0;
 }
 
+.carousel {
+    height: 100%;
+    min-width: 200px;
+    overflow-y: hidden;
+    position: relative;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.status-block .arrow {
+    right: 50%;
+    margin-right: -16px;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+}
+
+.status-block .arrow.prev {
+    top: 5px;
+    background: #f7f7f7 url(../img/arrow_double_top.svg) no-repeat center;
+    opacity: .7;
+    background-size: 50%;
+    transform: rotate(180deg);
+    z-index: 1;
+}
+
+.status-block .arrow.next {
+    bottom: 5px;
+    background: #f7f7f7 url(../img/arrow_double_top.svg) no-repeat center;
+    opacity: .7;
+    background-size: 50%;
+}
+
 .devices {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
+    transition: margin .2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.devices li {
+    display: block;
+    min-width: 200px;
+    height: 120px;
+    background: #f7f7f7;
+    border-radius: 20px;
+    padding: 14px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-decoration: none;
+}
+
+.devices li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.devices .label {
+    font-size: 14px;
+    color: #333333;
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.devices .action {
+    font-size: 12px;
+    color: #858585;
+}
+
+.devices .icon_temp {
+    background: #f7f7f7 url(../img/icon_temperature.svg) no-repeat 14px 14px;
+}
+
+.devices .icon_sun {
+    background: #f7f7f7 url(../img/icon_sun.svg) no-repeat 14px 14px;
+}
+
+.temperature-wrapper {
+    font-size: 0;
+    display: flex;
+    margin-top: 25px;
+}
+
+.temperature-wrapper:after {
+    content: '';
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: url(../img/cloud-drizzle.svg) no-repeat center;
+    background-size: 100%;
+    align-self: flex-end;
+    margin-left: 5px;
+}
+
+.temp-at-home {
+    margin-right: 18px;
+}
+
+.temperature-wrapper .label {
+    font-size: 14px;
+    color: #858585;
+    margin-bottom: 4px;
+}
+
+.temperature-wrapper .temp {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333333;
+    line-height: 27px;
+}
+
+.header-and-controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-and-controls .controls {
+    font-size: 0;
+}
+
+.fav-section .arrow {
+    width: 32px;
+    height: 32px;
+    border: none;
+}
+
+.fav-section .arrow.prev {
+    background: url(../img/arrow_right.png) no-repeat center;
+    background-size: 10px
+}
+
+.fav-section .arrow.next {
+    background: url(../img/arrow_right.png) no-repeat center;
+    background-size: 50%;
+    transform: rotate(180deg);
+    background-size: 10px
+}
+
+.slider-fav {
+    overflow: hidden;
+    max-height: 333px;
+    min-height: 333px;
+}
+
+.scenarios {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
     transition: margin .2s ease-in-out;
 }
 
-.devices a {
-    display: block;
+.scenarios button {
+    height: 100px;
     width: 200px;
-    height: 120px;
-    background: rgba(255, 255, 255, .7);
-    margin: 10px;
+    border: none;
+    background: #f7f7f7;
+    margin: 0 0 15px 0;
     border-radius: 20px;
+    box-sizing: border-box;
+    outline: none;
 }
 
+.scenarios button:focus {
+    background: #FFFFFF;
+    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.50);
+}
+
+.scenarios button:hover {
+    cursor: pointer;
+    background: #FFFFFF;
+    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.50);
+}
+
+.scenarios button:active {
+    box-shadow: inset 0 2px 6px 0 rgba(197, 186, 186, 0.50);
+}
+
+@media screen and (max-width: 991px) {
+    header .wrapper,
+    main .wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .main-and-fav section {
+        width: 100%;
+    }
+
+    .scenarios {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+    
+    .scenarios li button {
+        margin: 0;
+    }
+    
+    .scenarios li:not(:last-child) button {
+        margin-right: 20px;
+    }
+    
+    .fav-section .controls {
+        visibility: hidden;
+    }
+    
+/*
+    .slider-fav {
+        min-height: initial;
+        max-height: 105px;
+    }
+    
+    .scenarios li button {
+        margin-bottom: 0;
+    }
+    
+    .scenarios li:not(:last-child) button {
+        margin-right: 20px;
+    }
+    
+    .status-block {
+        flex-direction: column;
+        overflow-y: hidden;
+    }
+    .carousel {
+        max-height: 125px;
+        padding: 0;
+    }
+    .devices {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+    .devices li:not(:last-child) {
+        margin-right: 20px;
+    }
+    .status-block .arrow {
+        visibility: hidden;
+    }
+*/
+}

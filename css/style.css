@@ -78,7 +78,7 @@ main .wrapper {
 
 .main-and-fav section {
     width: 49%;
-    min-width: 438px;
+    /*    min-width: 438px;*/
     margin-bottom: 30px;
 }
 
@@ -230,7 +230,7 @@ main .wrapper {
 .temperature-wrapper .label {
     font-size: 14px;
     color: #858585;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
 }
 
 .temperature-wrapper .temp {
@@ -387,6 +387,32 @@ footer .copyright p {
 
     .status-block .arrow {
         visibility: hidden;
+    }
+
+    .status-block .info {
+        padding: 20px;
+    }
+
+    .status-block h3 {
+        font-size: 18px;
+    }
+
+    .status-block p {
+        font-size: 12px;
+    }
+
+    .temperature-wrapper .label {
+        font-size: 12px;
+    }
+
+    .temperature-wrapper .temp {
+        font-size: 24px;
+        line-height: 20px;
+    }
+
+    .temperature-wrapper:after {
+        width: 18px;
+        height: 18px;
     }
 
     .carousel {

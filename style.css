@@ -84,7 +84,7 @@ main .wrapper {
 }
 
 .devices {
-    padding: 20px 0;
+    padding: 20px 0 0 0;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -131,6 +131,10 @@ main .wrapper {
 
 .device:not(:last-child) {
     margin-bottom: 15px;
+}
+
+.device:last-child {
+    margin-bottom: 20px;
 }
 
 .device:nth-child(3):after {

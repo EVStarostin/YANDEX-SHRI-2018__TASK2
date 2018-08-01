@@ -1,3 +1,7 @@
 document.querySelector('.devices').addEventListener('scroll', function(e) {
-    this.classList.add('scrolled');
+    if (this.scrollTop !== 0) {
+        this.classList.add('scrolled');
+    } else {
+        this.classList.remove('scrolled');   
+    }
 });

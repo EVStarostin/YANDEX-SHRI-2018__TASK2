@@ -16,16 +16,16 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <div class="wrapper">
-            <a class="logo" href="index.html">
-            <img src="img/logo2x.png" alt="Логотип Яндекс">
-        </a>
+            <div class="logo"><a href="#"><img src="img/logo.svg" alt="Логотип Яндекса"></a></div>
             <nav>
                 <ul class="menu">
-                    <li><a class="active" href="#">Сводка</a></li>
-                    <li><a href="#">Устройства</a></li>
-                    <li><a href="#">Сценарии</a></li>
+                    <li>
+                        <a class="active" href="#">Сводка</a>
+                        <a href="#">Устройства</a>
+                        <a href="#">Сценарии</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -33,36 +33,47 @@
 
     <main>
         <div class="wrapper">
-            <section>
-                <h2>Главное</h2>
-                <div class="block-main">
-                    <h3>Привет, Геннадий!</h3>
-                    <p class="info">Двери и окна закрыты, сигнализация включена.</p>
-                    <div class="temp-block">
-                        <p class="place">Дома</p>
-                        <p class="temp">+23</p>
+            <section class="main">
+                <h2 class="section-heading">Главное</h2>
+                <div class="main-block">
+                    <div class="info">
+                        <h3 class="greeting">Привет, Геннадий!</h3>
+                        <p>Двери и окна закрыты, сигнализация включена.</p>
+                        <div class="temp-block-1">
+                            <p class="label"></p>
+                            <p class="temp"></p>
+                        </div>
+                        <div class="temp-block-2">
+                            <p class="label"></p>
+                            <p class="temp"></p>
+                        </div>
                     </div>
-                    <div class="temp-block">
-                        <p class="place">За окном</p>
-                        <p class="temp">+19</p>
+                    
+                    <div class="devices-wrapper">
+                        <div class="devices">
+                            <div class="device">
+
+                            </div>
+                            <div class="device">
+
+                            </div>
+                            <div class="device">
+
+                            </div>
+                        </div>
                     </div>
-                    <div class="rain-icon"></div>
-                    <ul class="tech-block">
-                        <li>Philips Cooler</li>
-                        <li>Xiaomi Yeelight LED Smart Bulb</li>
-                        <li>D-Link Omna 180 Cam</li>
-                        <li>Philips Cooler</li>
-                        <li>Xiaomi Yeelight LED Smart Bulb</li>
-                    </ul>
-                    <button class="control bottom"></button>
-                    <button class="control top"></button>
+
                 </div>
             </section>
-            <section>
-                <h2>Избранные сценарии</h2>
+            <section class="scenarios">
+                <h2 class="section-heading">Избранные сценарии</h2>
             </section>
         </div>
     </main>
+
+    <footer class="footer">
+
+    </footer>
 
     <!-- JavaScript -->
     <script src="script.js"></script>

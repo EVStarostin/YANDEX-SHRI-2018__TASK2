@@ -342,491 +342,403 @@ template {
 }
 
 /* --- Начало моих собственных стилей --- */
-
 html,
 body {
-    height: 100%
+  height: 100%;
 }
-
 .header-and_wrapper {
-    min-height: 100%;
+  min-height: 100%;
 }
-
 .clr:after {
-    content: '';
-    display: block;
-    height: 64px;
+  content: '';
+  display: block;
+  height: 64px;
 }
-
 body {
-    font-family: "Arial", sans-serif;
-    font-size: 14px;
-    color: #333;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  color: #333;
 }
-
 /* [начало] стили для шапки с логотипом и навигацией */
-
 header {
-    border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
 }
-
 .wrapper {
-    max-width: 1366px;
-    min-width: 320px;
-    margin: 0 auto;
-    padding: 0 40px;
-    box-sizing: border-box;
+  max-width: 1366px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
-
 .logo-and-nav {
-    padding: 22px 0;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+  padding: 22px 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
-
 .logo a {
-    display: block;
-    padding: 2px 0 5px 0;
+  display: block;
+  padding: 2px 0 5px 0;
 }
-
 .menu-btn {
-    width: 30px;
-    height: 30px;
-    background: url(img/icon_list.svg) no-repeat center;
-    border: none;
-    margin-left: auto;
-    display: none;
+  width: 30px;
+  height: 30px;
+  background: url(img/icon_list.svg) no-repeat center;
+  border: none;
+  margin-left: auto;
+  display: none;
 }
-
 .menu {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
-
 .menu a {
-    font-size: 16px;
-    color: #333333;
-    line-height: 20px;
-    text-decoration: none;
-    font-weight: 700;
-    opacity: .6;
-    padding: 5px;
-    margin: 0 10px;
-    transition: opacity .2s ease-in-out;
+  font-size: 16px;
+  color: #333333;
+  line-height: 20px;
+  text-decoration: none;
+  font-weight: 700;
+  opacity: 0.6;
+  padding: 5px;
+  margin: 0 10px;
+  transition: opacity 0.2s ease-in-out;
 }
-
 .menu a:not(:last-child) {
-    margin-right: 8px;
+  margin-right: 8px;
 }
-
 .menu .active {
-    opacity: 1;
+  opacity: 1;
 }
-
 .menu a:hover {
-    opacity: 1;
+  opacity: 1;
 }
-
 /* [конец] стили для шапки с логотипом и навигацией */
-
 .section-heading {
-    font-size: 18px;
-    margin: 0 0 20px 0;
+  font-size: 18px;
+  margin: 0 0 20px 0;
 }
-
 .main-and-scenarios {
-    padding: 29px 0;
-    display: flex;
-    justify-content: space-between;
+  padding: 29px 0;
+  display: flex;
+  justify-content: space-between;
 }
-
 .section-main,
 .section-scenarios {
-    width: 49%;
+  width: 49%;
 }
-
 .inner-block {
-    width: 100%;
-    height: 331px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  height: 331px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
 }
-
 .section-main .inner-block {
-    background-image: url(img/bg@1x.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 25px 20px 25px 25px;
-    box-sizing: border-box;
+  background-image: url(img/bg@1x.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 25px 20px 25px 25px;
+  box-sizing: border-box;
 }
-
 .section-main .greeting {
-    font-size: 27px;
-    font-weight: 700;
-    margin: 0;
+  font-size: 27px;
+  font-weight: 700;
+  margin: 0;
 }
-
 .section-main .status-text {
-    margin: 6px 0 0;
+  margin: 6px 0 0;
 }
-
 .temperature-blocks {
-    margin-top: 25px;
+  margin-top: 25px;
 }
-
 .temperature-blocks:after {
-    content: '';
-    display: inline-block;
-    width: 26px;
-    height: 26px;
-    background-image: url(img/cloud-drizzle.svg);
-    margin-left: 5px;
+  content: '';
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background-image: url(img/cloud-drizzle.svg);
+  margin-left: 5px;
 }
-
 .temperature-blocks .block {
-    display: inline-block;
+  display: inline-block;
 }
-
 .temperature-blocks .block:not(:last-child) {
-    margin-right: 15px;
+  margin-right: 15px;
 }
-
 .temperature-blocks .block .label {
-    color: #858585;
-    margin: 0;
+  color: #858585;
+  margin: 0;
 }
-
 .temperature-blocks .block .temperature {
-    font-size: 36px;
-    font-weight: 700;
-    margin: 4px 0 0;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 4px 0 0;
 }
-
 /* [начало] стили для плашки */
-
 .billet {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 200px;
-    height: 120px;
-    background: #F7F7F7;
-    border-radius: 20px;
-    padding: 14px;
-    box-sizing: border-box;
-    position: relative;
-    background-position: 14px 14px;
-    background-repeat: no-repeat;
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 200px;
+  height: 120px;
+  background: #F7F7F7;
+  border-radius: 20px;
+  padding: 14px;
+  box-sizing: border-box;
+  position: relative;
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+  text-align: left;
 }
-
 .billet .name {
-    font-weight: 700;
-    margin: 0;
-    margin-bottom: 4px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 4px;
 }
-
 .billet .action {
-    font-size: 12px;
-    color: #858585;
-    margin: 0;
+  font-size: 12px;
+  color: #858585;
+  margin: 0;
 }
-
 /* [конец] стили для плашки */
-
 .devices-slider {
-    margin: -25px 0;
-    height: 331px;
-    width: 200px;
-    min-width: 200px;
-    overflow: hidden;
-    position: relative;
+  margin: -25px 0;
+  height: 331px;
+  width: 200px;
+  min-width: 200px;
+  overflow: hidden;
+  position: relative;
 }
-
 .devices {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow-y: scroll;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-y: scroll;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
 }
-
 .devices li {
-    margin: 15px 0;
+  margin: 15px 0;
 }
-
 .devices li:first-child {
-    margin-top: 20px;
+  margin-top: 20px;
 }
-
 .devices li:last-child {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
-
 .devices :nth-child(3) .billet:after {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    background-image: url(img/double-arrow-up.svg);
-    left: 50%;
-    margin-left: -8px;
-    top: 13px;
-    transition: opacity .2s ease-in-out;
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url(img/double-arrow-up.svg);
+  left: 50%;
+  margin-left: -8px;
+  top: 13px;
+  transition: opacity 0.2s ease-in-out;
 }
-
 .scrolled li:nth-child(3) .billet:after {
-    opacity: 0;
+  opacity: 0;
 }
-
 .icon_sun {
-    background-image: url(img/icon_sun.svg);
+  background-image: url(img/icon_sun.svg);
 }
-
 .icon_sun_2 {
-    background-image: url(img/icon_sun_2.svg);
+  background-image: url(img/icon_sun_2.svg);
 }
-
-
 .icon_temperature {
-    background-image: url(img/icon_temperature.svg);
+  background-image: url(img/icon_temperature.svg);
 }
-
 .icon_temperature_2 {
-    background-image: url(img/icon_temperature_2.svg);
+  background-image: url(img/icon_temperature_2.svg);
 }
-
 .icon_scheduled {
-    background-image: url(img/icon_scheduled.svg);
+  background-image: url(img/icon_scheduled.svg);
 }
-
 .scenarios-slider {
-    overflow: hidden;
-    padding: 2px;
-    margin: -4px -23px -8px -2px;
+  overflow: hidden;
+  padding: 2px;
+  margin: -4px -23px -8px -2px;
 }
-
 .scenarios {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
-
 .scenarios button {
-    border: none;
-    margin: 0;
-    padding: 0;
-    background: none;
-    margin: 2px 15px 15px 2px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  margin: 2px 15px 15px 2px;
 }
-
 .scenarios button:focus {
-    outline: none;
+  outline: none;
 }
-
 .scenarios button:focus .billet {
-    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.90);
+  box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.9);
 }
-
 .scenarios .billet {
-    width: 200px;
-    height: 100px;
+  width: 200px;
+  height: 100px;
 }
-
 .scenarios button:hover .billet {
-    background-color: #fff;
-    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.90);
-    border-radius: 20px;
-    cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.9);
+  border-radius: 20px;
+  cursor: pointer;
 }
-
 .scenarios button:active .billet {
-    background-color: #fff;
-    box-shadow: inset 0 2px 6px 0 rgba(197, 186, 186, 0.90);
+  background-color: #fff;
+  box-shadow: inset 0 2px 6px 0 rgba(197, 186, 186, 0.9);
 }
-
 .heading-and-controls {
-    display: flex;
+  display: flex;
 }
-
 .heading-and-controls .controls {
-    margin-left: auto;
+  margin-left: auto;
 }
-
 .controls button {
-    background: none;
-    border: none;
-    opacity: .3;
-    padding: 5px 10px;
+  background: none;
+  border: none;
+  opacity: 0.3;
+  padding: 5px 10px;
 }
-
 .top-bar {
-    display: flex;
-    align-items: center;
-    margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
 }
-
 .filter {
-    padding: 0;
-    margin: 0;
-    margin-left: 3px;
-    list-style: none;
-    display: flex;
+  padding: 0;
+  margin: 0;
+  margin-left: 3px;
+  list-style: none;
+  display: flex;
 }
-
 .section-fav-devides .section-heading {
-    margin: 0;
+  margin: 0;
 }
-
 .filter button {
-    border: none;
-    background-color: #F7F7F7;
-    border-radius: 20px;
-    padding: 8px 15px;
-    font-size: 13px;
-    color: #000000;
-    font-weight: 700;
-    margin-left: 10px;
+  border: none;
+  background-color: #F7F7F7;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 13px;
+  color: #000000;
+  font-weight: 700;
+  margin-left: 10px;
 }
-
 .filter button:hover {
-    cursor: pointer;
-    background-color: #FFD93E;
+  cursor: pointer;
+  background-color: #FFD93E;
 }
-
 .filter .active {
-    background-color: #FFD93E;
+  background-color: #FFD93E;
 }
-
 .top-bar .controls {
-    margin-left: auto;
+  margin-left: auto;
 }
-
 .fav-devides-slider {
-    overflow: hidden;
-    height: 120px;
-    min-height: 120px;
-    margin-right: -40px;
-    margin-left: -40px;
+  overflow: hidden;
+  height: 120px;
+  min-height: 120px;
+  margin-right: -40px;
+  margin-left: -40px;
 }
-
 .fav-devides {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow-x: scroll;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: scroll;
 }
-
 .fav-devides li .billet {
-    margin-right: 15px;
+  margin-right: 15px;
 }
-
 .fav-devides li:first-child .billet {
-    margin-left: 40px;
+  margin-left: 40px;
 }
-
 .fav-devides li:last-child .billet {
-    margin-right: 40px;
+  margin-right: 40px;
 }
-
 /* [начало] стили для подвала */
-
 footer {
-    margin-top: -64px;
+  margin-top: -64px;
 }
-
 .links-and-copy {
-    display: flex;
-    padding: 19px 0;
+  display: flex;
+  padding: 19px 0;
 }
-
 .footer-links {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-
 .footer-links a {
-    padding: 5px;
-    display: inline-block;
-    font-size: 12px;
-    color: #858585;
-    text-decoration: none;
-    line-height: 16px;
+  padding: 5px;
+  display: inline-block;
+  font-size: 12px;
+  color: #858585;
+  text-decoration: none;
+  line-height: 16px;
 }
-
 .footer-links li:first-child a {
-    padding-left: 0;
+  padding-left: 0;
 }
-
 .footer-links a:hover {
-    color: #333;
+  color: #333;
 }
-
 .links-and-copy .copy {
-    margin-left: auto;
-    padding: 5px;
-    font-size: 12px;
-    color: #858585;
-    line-height: 16px;
+  margin-left: auto;
+  padding: 5px;
+  font-size: 12px;
+  color: #858585;
+  line-height: 16px;
 }
-
 /* [конец] стили для подвала */
-
 @media only screen and (min-device-pixel-ratio: 1.5) {
-    .section-main .inner-block {
-        background-image: url(img/bg@2x.png);
-    }
+  .section-main .inner-block {
+    background-image: url(img/bg@2x.png);
+  }
 }
-
 @media only screen and (max-width: 991.98px) {
-    .menu-btn {
-        display: block;
-    }
-
-    .menu-btn {
-        order: 0;
-    }
-
-    nav {
-        order: 1;
-        width: 100%;
-    }
-
-    nav .menu {
-        flex-direction: column;
-        text-align: center;
-        padding: 0;
-        margin: 0;
-        opacity: 0;
-        height: 0;
-        transition: opacity .2s ease-in-out, height .2s ease-in-out;
-        overflow: hidden;
-    }
-
-    nav .menu a {
-        width: 100%;
-        display: block;
-        margin: 0;
-    }
-
-    .menu.visible {
-        opacity: 1;
-        height: 90px;
-    }
+  .menu-btn {
+    display: block;
+  }
+  .menu-btn {
+    order: 0;
+  }
+  nav {
+    order: 1;
+    width: 100%;
+  }
+  nav .menu {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    height: 0;
+    transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out;
+    overflow: hidden;
+  }
+  nav .menu a {
+    width: 100%;
+    display: block;
+    margin: 0;
+  }
+  .menu.visible {
+    opacity: 1;
+    height: 90px;
+  }
 }
-
-
 /*
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { ... }

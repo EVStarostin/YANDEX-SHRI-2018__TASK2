@@ -4,3 +4,5 @@
 
 - [макеты](guide)
 - [пример анимации открытия попапа](Animation.mp4)
+
+https://evstarostin.github.io/YANDEX-SHRI-2018__TASK2/

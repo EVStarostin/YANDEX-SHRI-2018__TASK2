@@ -18,91 +18,95 @@
 <body>
     <header class="header">
         <div class="wrapper">
-            <div class="logo"><a href="#"><img src="img/logo.svg" alt="Логотип Яндекса"></a></div>
-            <nav>
-                <ul class="menu">
-                    <li>
-                        <a class="active" href="#">Сводка</a>
-                        <a href="#">Устройства</a>
-                        <a href="#">Сценарии</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="logo-and-nav">
+                <div class="logo"><a href="#"><img src="img/logo.svg" alt="Логотип Яндекса"></a></div>
+                <nav>
+                    <ul class="menu">
+                        <li>
+                            <a class="active" href="#">Сводка</a>
+                            <a href="#">Устройства</a>
+                            <a href="#">Сценарии</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <main>
+    <main class="main">
         <div class="wrapper">
-            <section class="main">
-                <h2 class="section-heading">Главное</h2>
-                <div class="main-block">
-                    <div class="info">
-                        <h3 class="greeting">Привет, Геннадий!</h3>
-                        <p class="status">Двери и окна закрыты, сигнализация включена.</p>
-                        <div class="temp-blocks">
-                            <div class="block">
-                                <p class="label">Дома</p>
-                                <p class="temp">+23</p>
-                            </div>
-                            <div class="block">
-                                <p class="label">За окном</p>
-                                <p class="temp">+19</p>
+            <div class="main-and-scenarios">
+                <section class="section-main">
+                    <h2 class="section-heading">Главное</h2>
+                    <div class="inner-block">
+                        <div class="info">
+                            <h3 class="greeting">Привет, Геннадий!</h3>
+                            <p class="status-text">Двери и окна закрыты, сигнализация включена.</p>
+                            <div class="temperature-blocks">
+                                <div class="block">
+                                    <p class="label">Дома</p>
+                                    <p class="temperature">+23</p>
+                                </div>
+                                <div class="block">
+                                    <p class="label">За окном</p>
+                                    <p class="temperature">+19</p>
+                                </div>
                             </div>
                         </div>
-
+                        <div class="devices-slider">
+                            <ul class="devices">
+                                <li>
+                                    <span class="billet icon_sun">
+                                        <p class="name">Philips Cooler</p>
+                                        <p class="action">Начнет охлаждать в 16:30</p>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="billet icon_temperature">
+                                        <p class="name">Xiaomi Yeelight LED Smart Bulb</p>
+                                        <p class="action">Включится в 17:00</p>
+                                    </span>
+                                </li>
+                                <li><span class="billet"></span></li>
+                            </ul>
+                        </div>
                     </div>
-
-                    <div class="devices-wrapper">
-                        <ul class="devices">
-                            <li class="device temperature">
-                                <p class="name">Philips Cooler</p>
-                                <p class="action">Начнет охлаждать в 16:30</p>
-                            </li>
-                            <li class="device sun">
-                                <p class="name">Xiaomi Yeelight LED Smart Bulb</p>
-                                <p class="action">Включится в 17:00</p>
-                            </li>
-                            <li class="device">
-
-                            </li>
-                        </ul>
+                </section>
+                <section class="section-scenarios">
+                    <div class="heading-and-controls">
+                        <h2 class="section-heading">Избранные сценарии</h2>
+                        <div class="controls">
+                            <button class="left">
+                                <svg width="9" height="14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M7.5 11.727c-.386 0-.623-.155-.935-.487L1.178 5.494a.917.917 0 0 1 0-1.238.785.785 0 0 1 1.16 0L7.5 9.763l5.162-5.507a.785.785 0 0 1 1.16 0c.32.342.32.896 0 1.238l-5.368 5.725c-.318.34-.568.508-.954.508z" id="a"/></defs><g fill="none" fill-rule="evenodd"><path fill="#none" d="M-1283-608H83v829h-1366z"/><g transform="matrix(-1 0 0 1 12 -1)"><path d="M0 0h15v16H0z"/><use fill="#000" fill-rule="nonzero" transform="matrix(0 1 1 0 -.363 .363)" xlink:href="#a"/></g></g></svg>
+                            </button>
+                            <button class="right">
+                                <svg width="9" height="14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M7.5 11.727c-.386 0-.623-.155-.935-.487L1.178 5.494a.917.917 0 0 1 0-1.238.785.785 0 0 1 1.16 0L7.5 9.763l5.162-5.507a.785.785 0 0 1 1.16 0c.32.342.32.896 0 1.238l-5.368 5.725c-.318.34-.568.508-.954.508z" id="a"/></defs><g fill="none" fill-rule="evenodd"><path fill="#none" d="M-1283-608H83v829h-1366z"/><g transform="matrix(-1 0 0 1 12 -1)"><path d="M0 0h15v16H0z"/><use fill="#000" fill-rule="nonzero" transform="matrix(0 -1 -1 0 15.363 15.363)" xlink:href="#a"/></g></g></svg>
+                            </button>
+                        </div>
                     </div>
-
-                </div>
-            </section>
-            <section class="scenarios">
-                <h2 class="section-heading">Избранные сценарии</h2>
-                <div class="scenarios-wrapper">
-                    <ul class="scenarios-block">
-                        <li class="device">
-                            <button>
-                                <span class="name">Выключить весь свет в доме и во дворе</span>
-                            </button>
-                        </li>
-                        <li class="device">
-                            <button>
-                                <span class="name">Я ухожу</span>
-                            </button>
-                        </li>
-                        <li class="device">
-                            <button>
-                                <span class="name">Включить свет в коридоре</span>
-                            </button>
-                        </li>
-                        <li class="device">
-                            <button>
-                                <span class="name">Набрать горячую ванну</span>
-                                <span class="action">Начнётся в 18:00</span>
-                            </button>
-                        </li>
-                        <li class="device">
-                            <button>
-                                <span class="name">Сделать пол тёплым во всей квартире</span>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+                    <div class="inner-block">
+                        <div class="scenarios-slider">
+                            <ul class="scenarios">
+                                <li><span class="billet"></span></li>
+                                <li><span class="billet"></span></li>
+                                <li><span class="billet"></span></li>
+                                <li><span class="billet"></span></li>
+                                <li><span class="billet"></span></li>
+                                <li><span class="billet"></span></li>
+                                <li><span class="billet"></span></li>
+                                <li><span class="billet"></span></li>
+                                <li><span class="billet"></span></li>
+                                <li><span class="billet"></span></li>
+                                <li><span class="billet"></span></li>
+                                <li><span class="billet"></span></li>
+                                <li><span class="billet"></span></li>
+                                <li><span class="billet"></span></li>
+                                <li><span class="billet"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     </main>
 

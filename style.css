@@ -1,19 +1,29 @@
+* {
+    /*    outline: 1px solid #ccc;*/
+}
+
 body {
     font-family: "Arial", sans-serif;
     font-size: 14px;
     color: #333333;
 }
 
+/* [начало] стили для шапки с логотипом и навигацией */
+
 header {
     border-bottom: 1px solid #f0f0f0;
 }
 
-header .wrapper {
+.wrapper {
     max-width: 1366px;
     margin: 0 auto;
-    padding: 22px 40px;
-    display: flex;
+    padding: 0 40px;
     box-sizing: border-box;
+}
+
+.logo-and-nav {
+    padding: 22px 0;
+    display: flex;
 }
 
 .menu {
@@ -44,104 +54,148 @@ header .wrapper {
     opacity: 1;
 }
 
+/* [конец] стили для шапки с логотипом и навигацией */
+
 .section-heading {
     font-size: 18px;
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
 }
 
-main .wrapper {
-    max-width: 1366px;
-    margin: 0 auto;
-    padding: 22px 40px;
+.main-and-scenarios {
+    padding: 29px 0;
     display: flex;
     justify-content: space-between;
-    box-sizing: border-box;
 }
 
-.main,
-.scenarios {
-    width: 630px;
+.section-main,
+.section-scenarios {
+    width: 49%;
 }
 
-.main-block {
-    box-sizing: border-box;
+.inner-block {
+    width: 100%;
     height: 331px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-main .inner-block {
     background-image: url(img/bg@1x.png);
     background-position: center;
     background-size: cover;
-    border-radius: 20px;
-    padding: 20px 20px 20px 25px;
-    display: flex;
-    justify-content: space-between;
+    background-repeat: no-repeat;
+    padding: 25px 20px 25px 25px;
+    box-sizing: border-box;
 }
 
-.devices-wrapper {
-    margin: -20px 0;
+.section-main .greeting {
+    font-size: 27px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.section-main .status-text {
+    margin: 6px 0 0;
+}
+
+.temperature-blocks {
+    margin-top: 25px;
+}
+
+.temperature-blocks:after {
+    content: '';
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-image: url(img/cloud-drizzle.svg);
+    margin-left: 5px;
+}
+
+.temperature-blocks .block {
+    display: inline-block;
+}
+
+.temperature-blocks .block:not(:last-child) {
+    margin-right: 15px;
+}
+
+.temperature-blocks .block .label {
+    color: #858585;
+    margin: 0;
+}
+
+.temperature-blocks .block .temperature {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 4px 0 0;
+}
+
+/* [начало] стили для плашки */
+
+.billet {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 200px;
+    /*    min-width: 200px;*/
+    height: 120px;
+    background: #F7F7F7;
+    border-radius: 20px;
+    padding: 14px;
+    box-sizing: border-box;
+    position: relative;
+    background-position: 14px 14px;
+    background-repeat: no-repeat;
+}
+
+.billet .name {
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.billet .action {
+    font-size: 12px;
+    color: #858585;
+    margin: 0;
+}
+
+/* [конец] стили для плашки */
+
+.devices-slider {
+    margin: -25px 0;
     height: 331px;
     width: 200px;
+    min-width: 200px;
     overflow: hidden;
     position: relative;
 }
 
 .devices {
-    padding: 20px 0 0 0;
     margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-y: scroll;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    right: -20px;
-    overflow-y: scroll;
 }
 
-.device {
-    height: 120px;
-    background-color: #f7f7f7;
-    width: 200px;
-    position: relative;
-    border-radius: 20px;
-    background-position: 14px 14px;
-    background-repeat: no-repeat;
-    padding: 14px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+.devices li {
+    margin: 15px 0;
 }
 
-.device.sun {
-    background-image: url(img/icon_sun.svg);
+.devices li:first-child {
+    margin-top: 20px;
 }
 
-.device.temperature {
-    background-image: url(img/icon_temperature.svg);
-}
-
-.device .name {
-    font-size: 14px;
-    font-weight: 700;
-    margin: 0;
-    display: block;
-    text-align: left;
-}
-
-.device .action {
-    font-size: 12px;
-    color: #858585;
-    margin: 0;
-    display: block;
-    margin-top: 5px;
-}
-
-.device:not(:last-child) {
-    margin-bottom: 15px;
-}
-
-.device:last-child {
+.devices li:last-child {
     margin-bottom: 20px;
 }
 
-.devices .device:nth-child(3):after {
+.devices :nth-child(3) .billet:after {
     content: '';
     position: absolute;
     width: 16px;
@@ -153,96 +207,65 @@ main .wrapper {
     transition: opacity .2s ease-in-out;
 }
 
-.scrolled .device:nth-child(3):after {
+.scrolled li:nth-child(3) .billet:after {
     opacity: 0;
 }
 
-.main-block .greeting {
-    font-size: 27px;
-    font-weight: 700;
-    margin: 6px 0;
+.icon_sun {
+    background-image: url(img/icon_sun.svg);
 }
 
-.main-block .info .status {
-    margin: 0;
+.icon_temperature {
+    background-image: url(img/icon_temperature.svg);
 }
 
-.temp-blocks {
-    display: flex;
-    margin-top: 25px;
-    align-items: flex-end;
+.scenarios-slider {
+    overflow: hidden;
+    padding: 2px;
+    margin: -2px -23px -10px -2px;
 }
 
-.temp-blocks:after {
-    content: '';
-    display: block;
-    width: 26px;
-    height: 26px;
-    background-image: url(img/cloud-drizzle.svg);
-    background-color: transparent;
-    margin-left: 6px;
-}
-
-.temp-blocks .block:not(:last-child) {
-    margin-right: 20px;
-}
-
-.temp-blocks .block .label {
-    color: #858585;
-    margin: 0 0 4px 0;
-}
-
-.temp-blocks .block .temp {
-    font-size: 36px;
-    font-weight: 700;
-    margin: 0;
-    line-height: 27px;
-}
-
-.scenarios-block {
+.scenarios {
     margin: 0;
     padding: 0;
+/*    padding: 2px;*/
+    list-style: none;
     display: flex;
-    /*    justify-content: space-between;*/
     flex-wrap: wrap;
+    justify-content: flex-start;
+/*    overflow-y: hidden;*/
+/*    margin: -2px -23px -10px -2px;*/
 }
 
-.scenarios-block .device {
+.scenarios .billet {
+    width: 200px;
     height: 100px;
-    padding: 0;
-    display: block;
+    margin: 2px 15px 15px 2px;
 }
 
-.scenarios-block .device:not(:nth-child(3n)) {
-    margin-right: 15px;
-}
-
-.scenarios-block .device button {
-    height: 100%;
-    width: 100%;
-    background: none;
-    border: none;
-    border-radius: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 14px;
-}
-
-.scenarios-block .device button:hover {
+.scenarios .billet:hover {
     background: #FFFFFF;
-    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.50);
+    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.90);
+    border-radius: 20px;
     cursor: pointer;
 }
 
-@media only screen and (max-width: 1365px) {
-    .scenarios-block .device:not(:nth-child(2n)) {
-        margin-right: 15px;
-    }
+.heading-and-controls {
+    display: flex;
+}
+
+.heading-and-controls .controls {
+    margin-left: auto;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    opacity: .3;
 }
 
 @media only screen and (min-device-pixel-ratio: 1.5) {
-    .main-block {
+    .section-main .inner-block {
         background-image: url(img/bg@2x.png);
     }
 }

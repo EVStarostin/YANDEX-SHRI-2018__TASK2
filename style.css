@@ -2,11 +2,28 @@
     /*    outline: 1px solid #ccc;*/
 }
 
+html,
+body {
+    height: 100%
+}
+
+.header-and_wrapper {
+    min-height: 100%;
+}
+
+.clr:after {
+    content: '';
+    display: block;
+    height: 63px;
+}
+
 body {
     font-family: "Arial", sans-serif;
     font-size: 14px;
     color: #333;
 }
+
+.header-and_wrapper {}
 
 /* [начало] стили для шапки с логотипом и навигацией */
 
@@ -336,6 +353,10 @@ header {
 }
 
 /* [начало] стили для подвала */
+
+footer {
+    margin-top: -63px;
+}
 
 .links-and-copy {
     display: flex;

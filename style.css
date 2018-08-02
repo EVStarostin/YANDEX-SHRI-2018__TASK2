@@ -464,7 +464,6 @@ footer {
         margin: 0;
         opacity: 0;
         height: 0;
-        overflow: hidden;
         transition: all .2s ease-in-out;
     }
 

@@ -5,3 +5,7 @@ document.querySelector('.devices').addEventListener('scroll', function (e) {
         this.classList.remove('scrolled');   
     }
 });
+
+document.querySelector('.menu-btn').addEventListener('click', function (e) {
+    document.querySelector('.menu').classList.toggle('visible');
+});

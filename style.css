@@ -23,8 +23,6 @@ body {
     color: #333;
 }
 
-.header-and_wrapper {}
-
 /* [начало] стили для шапки с логотипом и навигацией */
 
 header {
@@ -33,6 +31,7 @@ header {
 
 .wrapper {
     max-width: 1366px;
+    min-width: 320px;
     margin: 0 auto;
     padding: 0 40px;
     box-sizing: border-box;
@@ -41,6 +40,26 @@ header {
 .logo-and-nav {
     padding: 22px 0;
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo a {
+    display: block;
+    padding: 2px 0 5px 0;
+}
+
+.logo img {
+    /*    vertical-align: top;*/
+}
+
+.menu-btn {
+    width: 30px;
+    height: 30px;
+    background: url(img/icon_list.svg) no-repeat center;
+    border: none;
+    margin-left: auto;
+    display: none;
 }
 
 .menu {
@@ -55,7 +74,8 @@ header {
     text-decoration: none;
     font-weight: 700;
     opacity: .6;
-    padding: 10px;
+    padding: 5px;
+    margin: 0 10px;
     transition: opacity .2s ease-in-out;
 }
 
@@ -422,3 +442,55 @@ footer {
         background-image: url(img/bg@2x.png);
     }
 }
+
+@media only screen and (max-width: 991.98px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .menu-btn {
+        order: 0;
+    }
+
+    nav {
+        order: 1;
+        width: 100%;
+    }
+
+    nav .menu {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: all .2s ease-in-out;
+    }
+
+    nav .menu a {
+        width: 100%;
+        display: block;
+        margin: 0;
+    }
+
+    .menu.visible {
+        opacity: 1;
+        height: 90px;
+    }
+}
+
+
+/*
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { ... }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { ... }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { ... }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... }
+*/

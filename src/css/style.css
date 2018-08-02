@@ -1,6 +1,4 @@
-* {
-    /*    outline: 1px solid #ccc;*/
-}
+/* --- Начало моих собственных стилей --- */
 
 html,
 body {
@@ -49,14 +47,10 @@ header {
     padding: 2px 0 5px 0;
 }
 
-.logo img {
-    /*    vertical-align: top;*/
-}
-
 .menu-btn {
     width: 30px;
     height: 30px;
-    background: url(img/icon_list.svg) no-repeat center;
+    background: url(../img/icon_list.svg) no-repeat center;
     border: none;
     margin-left: auto;
     display: none;
@@ -118,7 +112,7 @@ header {
 }
 
 .section-main .inner-block {
-    background-image: url(img/bg@1x.png);
+    background-image: url(../img/bg@1x.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -145,7 +139,7 @@ header {
     display: inline-block;
     width: 26px;
     height: 26px;
-    background-image: url(img/cloud-drizzle.svg);
+    background-image: url(../img/cloud-drizzle.svg);
     margin-left: 5px;
 }
 
@@ -237,7 +231,7 @@ header {
     position: absolute;
     width: 16px;
     height: 16px;
-    background-image: url(img/double-arrow-up.svg);
+    background-image: url(../img/double-arrow-up.svg);
     left: 50%;
     margin-left: -8px;
     top: 13px;
@@ -249,24 +243,24 @@ header {
 }
 
 .icon_sun {
-    background-image: url(img/icon_sun.svg);
+    background-image: url(../img/icon_sun.svg);
 }
 
 .icon_sun_2 {
-    background-image: url(img/icon_sun_2.svg);
+    background-image: url(../img/icon_sun_2.svg);
 }
 
 
 .icon_temperature {
-    background-image: url(img/icon_temperature.svg);
+    background-image: url(../img/icon_temperature.svg);
 }
 
 .icon_temperature_2 {
-    background-image: url(img/icon_temperature_2.svg);
+    background-image: url(../img/icon_temperature_2.svg);
 }
 
 .icon_scheduled {
-    background-image: url(img/icon_scheduled.svg);
+    background-image: url(../img/icon_scheduled.svg);
 }
 
 .scenarios-slider {
@@ -448,7 +442,7 @@ footer {
 
 @media only screen and (min-device-pixel-ratio: 1.5) {
     .section-main .inner-block {
-        background-image: url(img/bg@2x.png);
+        background-image: url(../img/bg@2x.png);
     }
 }
 

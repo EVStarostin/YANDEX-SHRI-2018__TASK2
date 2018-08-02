@@ -379,6 +379,7 @@ header {
     height: 120px;
     min-height: 120px;
     margin-right: -40px;
+    margin-left: -40px;
 }
 
 .fav-devides {
@@ -389,8 +390,16 @@ header {
     overflow-x: scroll;
 }
 
-.fav-devides li {
+.fav-devides li .billet {
     margin-right: 15px;
+}
+
+.fav-devides li:first-child .billet {
+    margin-left: 40px;
+}
+
+.fav-devides li:last-child .billet {
+    margin-right: 40px;
 }
 
 /* [начало] стили для подвала */

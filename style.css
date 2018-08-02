@@ -5,7 +5,7 @@
 body {
     font-family: "Arial", sans-serif;
     font-size: 14px;
-    color: #333333;
+    color: #333;
 }
 
 /* [начало] стили для шапки с логотипом и навигацией */
@@ -138,7 +138,6 @@ header {
     flex-direction: column;
     justify-content: flex-end;
     width: 200px;
-    /*    min-width: 200px;*/
     height: 120px;
     background: #F7F7F7;
     border-radius: 20px;
@@ -274,6 +273,107 @@ header {
     opacity: .3;
     padding: 5px 10px;
 }
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.filter {
+    padding: 0;
+    margin: 0;
+    margin-left: 3px;
+    list-style: none;
+    display: flex;
+}
+
+.section-fav-devides .section-heading {
+    margin: 0;
+}
+
+.filter button {
+    border: none;
+    background-color: #F7F7F7;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 13px;
+    color: #000000;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.filter button:hover {
+    cursor: pointer;
+    background-color: #FFD93E;
+}
+
+.filter .active {
+    background-color: #FFD93E;
+}
+
+.top-bar .controls {
+    margin-left: auto;
+}
+
+.fav-devides-slider {
+    overflow: hidden;
+    height: 120px;
+    min-height: 120px;
+    margin-right: -40px;
+}
+
+.fav-devides {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-x: scroll;
+}
+
+.fav-devides li {
+    margin-right: 15px;
+}
+
+/* [начало] стили для подвала */
+
+.links-and-copy {
+    display: flex;
+    padding: 19px 0;
+}
+
+.footer-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-links a {
+    padding: 5px;
+    display: inline-block;
+    font-size: 12px;
+    color: #858585;
+    text-decoration: none;
+    line-height: 16px;
+}
+
+.footer-links li:first-child a {
+    padding-left: 0;
+}
+
+.footer-links a:hover {
+    color: #333;
+}
+
+.links-and-copy .copy {
+    margin-left: auto;
+    padding: 5px;
+    font-size: 12px;
+    color: #858585;
+    line-height: 16px;
+}
+
+/* [конец] стили для подвала */
 
 @media only screen and (min-device-pixel-ratio: 1.5) {
     .section-main .inner-block {

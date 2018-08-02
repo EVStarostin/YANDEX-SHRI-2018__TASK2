@@ -464,7 +464,8 @@ footer {
         margin: 0;
         opacity: 0;
         height: 0;
-        transition: all .2s ease-in-out;
+        transition: opacity .2s ease-in-out, height .2s ease-in-out;
+        overflow: hidden;
     }
 
     nav .menu a {

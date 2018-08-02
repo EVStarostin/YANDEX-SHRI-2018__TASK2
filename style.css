@@ -215,8 +215,21 @@ header {
     background-image: url(img/icon_sun.svg);
 }
 
+.icon_sun_2 {
+    background-image: url(img/icon_sun_2.svg);
+}
+
+
 .icon_temperature {
     background-image: url(img/icon_temperature.svg);
+}
+
+.icon_temperature_2 {
+    background-image: url(img/icon_temperature_2.svg);
+}
+
+.icon_scheduled {
+    background-image: url(img/icon_scheduled.svg);
 }
 
 .scenarios-slider {
@@ -228,13 +241,10 @@ header {
 .scenarios {
     margin: 0;
     padding: 0;
-/*    padding: 2px;*/
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-/*    overflow-y: hidden;*/
-/*    margin: -2px -23px -10px -2px;*/
 }
 
 .scenarios .billet {
@@ -244,7 +254,7 @@ header {
 }
 
 .scenarios .billet:hover {
-    background: #FFFFFF;
+    background-color: #FFFFFF;
     box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.90);
     border-radius: 20px;
     cursor: pointer;
@@ -262,6 +272,7 @@ header {
     background: none;
     border: none;
     opacity: .3;
+    padding: 5px 10px;
 }
 
 @media only screen and (min-device-pixel-ratio: 1.5) {

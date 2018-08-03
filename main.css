@@ -645,7 +645,7 @@ html body {
 .section-scenarios .scenarios button .billet {
   width: 200px;
   height: 100px;
-  margin: 2px 15px 15px 2px;
+  margin: 2px 15px 15px 0;
 }
 .section-scenarios .scenarios button:focus {
   outline: none;
@@ -907,9 +907,6 @@ html body {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     overflow-y: auto;
-  }
-  .section-scenarios .scenarios li .billet {
-    margin-right: 0 10px;
   }
   .section-scenarios .scenarios li:first-child .billet {
     margin-left: 20px;

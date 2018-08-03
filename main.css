@@ -345,28 +345,17 @@ template {
 }
 
 /* --- Начало собственных стилей --- */
-/*
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) { ... }
-
-// Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) { ... }
-
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) { ... }
-
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) { ... }
-*/
-html,
-body {
+/* Высота html и body = 100% для прижатия подвала к низу страницы */
+html {
   height: 100%;
 }
-body {
+html body {
   font-family: "Arial", sans-serif;
   font-size: 14px;
   color: #333;
+  height: 100%;
 }
+/* Стили для обертки для выравнивания по центру и задания максимальной ширины контента */
 .wrapper {
   max-width: 1366px;
   min-width: 320px;
@@ -375,6 +364,8 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+/* Стили для контейнера с шапкой и контентом для прижатия подвала вниз страницы
+Псевдоэлемент .clr:after задает отступ снизу чтобы контент не налазил на подвал */
 .header-and-main {
   min-height: 100%;
 }
@@ -383,10 +374,12 @@ body {
   display: block;
   height: 64px;
 }
+/* Стили для заголовков разделов */
 .section-heading {
   font-size: 18px;
   margin: 0 0 20px 0;
 }
+/* Стили для шапки сайта */
 .page_header {
   border-bottom: 1px solid #f0f0f0;
 }
@@ -441,7 +434,7 @@ body {
 .page_header .menu .active {
   opacity: 1;
 }
-/* Плашка для сценариев и устройств */
+/* Стили для плашки сценариев и устройств */
 .billet {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -490,6 +483,7 @@ body {
 .billet.icon_scheduled {
   background-image: url(img/icon_scheduled.svg);
 }
+/* Стили для контейнера, содержащего разделы Главное и Избранные сценарии */
 .main-and-scenarios {
   padding: 29px 0;
   display: -webkit-box;
@@ -514,6 +508,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+/* Стили для раздела Главное */
 .section-main .inner-block {
   background-image: url(img/bg@1x.png);
   background-position: center;
@@ -608,6 +603,7 @@ body {
 .section-main .devices.scrolled li:nth-child(3) .billet:after {
   opacity: 0;
 }
+/* Стили для раздела Избранные сценарии */
 .section-scenarios .scenarios-slider {
   overflow: hidden;
   padding: 2px;
@@ -670,6 +666,7 @@ body {
   -webkit-box-shadow: inset 0 2px 6px 0 rgba(197, 186, 186, 0.9);
           box-shadow: inset 0 2px 6px 0 rgba(197, 186, 186, 0.9);
 }
+/* Стили для раздела Избранные устройства */
 .section-fav-devides .top-bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -742,6 +739,7 @@ body {
 .section-fav-devides .fav-devides li:last-child .billet {
   margin-right: 40px;
 }
+/* Стили для подвала сайта */
 .page_footer {
   margin-top: -64px;
 }
@@ -777,11 +775,13 @@ body {
   color: #858585;
   line-height: 16px;
 }
+/* Стили для устройств с плотностью пикселей x2 */
 @media  only screen and (min-device-pixel-ratio: 2) {
   .section-main .inner-block {
     background-image: url(img/bg@2x.png);
   }
 }
+/* Стили для устройств с экраном меньше 992px */
 @media  only screen and (max-width: 991.98px) {
   .wrapper {
     padding: 0 20px;

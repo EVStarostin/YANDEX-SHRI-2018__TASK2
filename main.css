@@ -519,7 +519,7 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 25px 20px 25px 25px;
+  padding: 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -558,7 +558,7 @@ body {
   margin: 4px 0 0;
 }
 .section-main .devices-slider {
-  margin: -25px 0;
+  margin: -25px -5px -25px 0;
   height: 331px;
   width: 200px;
   min-width: 200px;
@@ -569,19 +569,26 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  overflow-y: scroll;
-  position: absolute;
+  overflow-y: auto;
   top: 0;
   bottom: 0;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
 }
-.section-main .devices li {
-  margin: 15px 0;
+.section-main .devices li .billet {
+  margin: 7.5px 0;
 }
-.section-main .devices li:first-child {
+.section-main .devices li:first-child .billet {
   margin-top: 20px;
 }
-.section-main .devices li:last-child {
+.section-main .devices li:last-child .billet {
   margin-bottom: 20px;
 }
 .section-main .devices li:nth-child(3) .billet:after {
@@ -637,11 +644,11 @@ body {
   margin: 0;
   padding: 0;
   background: none;
-  margin: 2px 15px 15px 2px;
 }
 .section-scenarios .scenarios button .billet {
   width: 200px;
   height: 100px;
+  margin: 2px 15px 15px 2px;
 }
 .section-scenarios .scenarios button:focus {
   outline: none;
@@ -810,6 +817,98 @@ body {
   .page_header .menu.visible {
     opacity: 1;
     height: 90px;
+  }
+  .main-and-scenarios {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-and-scenarios .section-main,
+  .main-and-scenarios .section-scenarios {
+    width: 100%;
+  }
+  .main-and-scenarios .inner-block {
+    height: 282px;
+  }
+  .section-main .greeting {
+    font-size: 18px;
+  }
+  .section-main .status-text {
+    font-size: 12px;
+  }
+  .section-main .temperature-blocks {
+    margin-top: 15px;
+  }
+  .section-main .temperature-blocks .label {
+    font-size: 12px;
+  }
+  .section-main .temperature-blocks .temperature {
+    font-size: 24px;
+  }
+  .section-main .inner-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+  }
+  .section-main .devices-slider {
+    height: 120px;
+    min-height: 120px;
+    width: auto;
+    min-width: auto;
+    margin: 0px -20px 0 -20px;
+  }
+  .section-main .devices {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    overflow-x: auto;
+    position: static;
+  }
+  .section-main .devices li .billet {
+    margin: 0 10px;
+  }
+  .section-main .devices li:first-child .billet {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+  .section-main .devices li:last-child .billet {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+  .section-main .devices li:nth-child(3) .billet:after {
+    display: none;
+  }
+  .section-scenarios {
+    margin-top: 30px;
+  }
+  .section-scenarios .inner-block {
+    height: auto;
+  }
+  .section-scenarios .scenarios-slider {
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    padding-bottom: 7px;
+    margin-right: -40px;
+    margin-left: -40px;
+  }
+  .section-scenarios .scenarios {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow-y: auto;
+  }
+  .section-scenarios .scenarios li .billet {
+    margin-right: 0 10px;
+  }
+  .section-scenarios .scenarios li:first-child .billet {
+    margin-left: 40px;
+  }
+  .section-scenarios .scenarios li:last-child .billet {
+    margin-right: 40px;
   }
 }
 

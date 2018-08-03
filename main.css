@@ -782,6 +782,9 @@ body {
   }
 }
 @media  only screen and (max-width: 991.98px) {
+  .wrapper {
+    padding: 0 20px;
+  }
   .page_header .menu-btn {
     display: block;
     -webkit-box-ordinal-group: 1;
@@ -893,8 +896,11 @@ body {
     padding: 0;
     height: 100px;
     padding-bottom: 7px;
-    margin-right: -40px;
-    margin-left: -40px;
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+  .section-scenarios .heading-and-controls .controls {
+    display: none;
   }
   .section-scenarios .scenarios {
     -ms-flex-wrap: nowrap;
@@ -905,10 +911,26 @@ body {
     margin-right: 0 10px;
   }
   .section-scenarios .scenarios li:first-child .billet {
-    margin-left: 40px;
+    margin-left: 20px;
   }
   .section-scenarios .scenarios li:last-child .billet {
-    margin-right: 40px;
+    margin-right: 20px;
+  }
+  .section-fav-devides .fav-devides-slider {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+  .section-fav-devides .fav-devides li:first-child .billet {
+    margin-left: 20px;
+  }
+  .section-fav-devides .fav-devides li:last-child .billet {
+    margin-right: 20px;
+  }
+  .section-fav-devides .top-bar .filter {
+    display: none;
+  }
+  .section-fav-devides .top-bar .controls {
+    display: none;
   }
 }
 

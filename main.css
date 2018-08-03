@@ -753,6 +753,11 @@ html body {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .page_footer .footer-links li a {
   padding: 5px;
@@ -770,10 +775,9 @@ html body {
 }
 .page_footer .copy {
   margin-left: auto;
-  padding: 5px;
   font-size: 12px;
   color: #858585;
-  line-height: 16px;
+  line-height: 26px;
 }
 /* Стили для устройств с плотностью пикселей x2 */
 @media  only screen and (min-device-pixel-ratio: 2) {

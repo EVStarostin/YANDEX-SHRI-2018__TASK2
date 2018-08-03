@@ -242,20 +242,16 @@ body {
                 margin-bottom: 20px;
             }
 
-            &:nth-child(3) {
-                .billet {
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        width: 16px;
-                        height: 16px;
-                        background-image: url(../img/double-arrow-up.svg);
-                        left: 50%;
-                        margin-left: -8px;
-                        top: 13px;
-                        transition: opacity .2s ease-in-out;
-                    }
-                }
+            &:nth-child(3) .billet:after {
+                content: '';
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                background-image: url(../img/double-arrow-up.svg);
+                left: 50%;
+                margin-left: -8px;
+                top: 13px;
+                transition: opacity .2s ease-in-out;
             }
         }
 

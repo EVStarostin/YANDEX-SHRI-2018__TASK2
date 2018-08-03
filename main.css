@@ -790,6 +790,26 @@ html body {
   .wrapper {
     padding: 0 20px;
   }
+  .header-and-main {
+    padding-top: 64px;
+    -webkit-transition: padding 0.2s ease-in-out;
+    -o-transition: padding 0.2s ease-in-out;
+    transition: padding 0.2s ease-in-out;
+  }
+  .header-and-main.menu-visible {
+    padding-top: 184px;
+  }
+  .page_header {
+    border-bottom: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+  }
+  .page_header .logo-and-nav {
+    padding: 8px 0;
+  }
   .page_header .menu-btn {
     display: block;
     -webkit-box-ordinal-group: 1;
@@ -821,16 +841,19 @@ html body {
     width: 100%;
     display: block;
     margin: 0;
+    font-size: 20px;
+    padding: 10px;
   }
   .page_header .menu.visible {
     opacity: 1;
-    height: 90px;
+    height: 120px;
   }
   .main-and-scenarios {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-top: 0;
   }
   .main-and-scenarios .section-main,
   .main-and-scenarios .section-scenarios {
@@ -838,6 +861,11 @@ html body {
   }
   .main-and-scenarios .inner-block {
     height: 282px;
+  }
+  .section-main .section-heading {
+    visibility: hidden;
+    height: 0;
+    margin: 0;
   }
   .section-main .greeting {
     font-size: 18px;

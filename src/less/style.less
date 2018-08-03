@@ -1,17 +1,19 @@
 /* --- Начало собственных стилей --- */
 @import "_const.less";
 
-html,
-body {
-    height: 100%
+/* Высота html и body = 100% для прижатия подвала к низу страницы */
+html {
+    height: 100%;
+
+    body {
+        font-family: @font-family-primary;
+        font-size: @font-size-primary;
+        color: @font-color-primary;
+        height: 100%;
+    }
 }
 
-body {
-    font-family: @font-family-primary;
-    font-size: @font-size-primary;
-    color: @font-color-primary;
-}
-
+/* Стили для обертки для выравнивания по центру и задания максимальной ширины контента */
 .wrapper {
     max-width: 1366px;
     min-width: 320px;
@@ -20,6 +22,8 @@ body {
     box-sizing: border-box;
 }
 
+/* Стили для контейнера с шапкой и контентом для прижатия подвала вниз страницы
+Псевдоэлемент .clr:after задает отступ снизу чтобы контент не налазил на футер */
 .header-and-main {
     min-height: 100%;
 
@@ -32,11 +36,13 @@ body {
     }
 }
 
+/* Стили для заголовков разделов */
 .section-heading {
     font-size: 18px;
     margin: 0 0 20px 0;
 }
 
+/* Стили для шапки сайта */
 .page_header {
     border-bottom: 1px solid #f0f0f0;
 
@@ -93,7 +99,7 @@ body {
     }
 }
 
-/* Плашка для сценариев и устройств */
+/* Стили для плашки сценариев и устройств */
 .billet {
     display: flex;
     flex-direction: column;
@@ -142,6 +148,7 @@ body {
     }
 }
 
+/* Стили для контейнера, содержащего разделы Главное и Избранные сценарии */
 .main-and-scenarios {
     padding: 29px 0;
     display: flex;
@@ -160,7 +167,8 @@ body {
         justify-content: space-between;
     }
 }
-    
+
+/* Стили для раздела Главное */
 .section-main {
     .inner-block {
         background-image: url(../img/bg@1x.png);
@@ -267,6 +275,7 @@ body {
     }
 }
 
+/* Стили для раздела Избранные сценарии */
 .section-scenarios {
     .scenarios-slider {
         overflow: hidden;
@@ -336,6 +345,7 @@ body {
     }
 }
 
+/* Стили для раздела Избранные устройства */
 .section-fav-devides {
     .top-bar {
         display: flex;
@@ -421,6 +431,7 @@ body {
     }
 }
 
+/* Стили для подвала сайта */
 .page_footer {
     margin-top: -64px;
 
@@ -465,6 +476,7 @@ body {
     }
 }
 
+/* Стили для устройств с плотностью пикселей x2 */
 @media @retina {
     .section-main {
         .inner-block {
@@ -473,6 +485,7 @@ body {
     }
 }
 
+/* Стили для устройств с экраном меньше 992px */
 @media @phone {
     @main-slider-height: 282px;
     @wrapper-side-padding: 20px;

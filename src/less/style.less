@@ -301,11 +301,11 @@ body {
             margin: 0;
             padding: 0;
             background: none;
-            margin: 2px 15px 15px 2px;
 
             .billet {
                 width: 200px;
                 height: 100px;
+                margin: 2px 15px 15px 2px;
             }
 
             &:focus {
@@ -582,5 +582,45 @@ body {
             }
         }
     }
+
+    .section-scenarios {
+        margin-top: 30px;
+
+        .inner-block {
+            height: auto;
+        }
+
+        .scenarios-slider {
+            margin: 0;
+            padding: 0;
+            height: 100px;
+            padding-bottom: 7px;
+            margin-right: -@wrapper-side-padding;
+            margin-left: -@wrapper-side-padding;
+        }
+
+        .scenarios {
+            flex-wrap: nowrap;
+            overflow-y: auto;
+            
+            li {
+                .billet {
+                    margin-right: 0 10px;
+                }
+    
+                &:first-child {
+                    .billet {
+                        margin-left: @wrapper-side-padding;
+                    }
+                }
+    
+                &:last-child {
+                    .billet {
+                        margin-right: @wrapper-side-padding;
+                    }
+                }
+            }
+        }
+    }   
 }
 

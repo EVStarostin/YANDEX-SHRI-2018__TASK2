@@ -43,7 +43,8 @@ h1 {
  */
 
 hr {
-  box-sizing: content-box; /* 1 */
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
 }
@@ -231,7 +232,8 @@ fieldset {
  */
 
 legend {
-  box-sizing: border-box; /* 1 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
   display: table; /* 1 */
   max-width: 100%; /* 1 */
@@ -262,7 +264,8 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box; /* 1 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
 
@@ -368,13 +371,19 @@ header {
   min-width: 320px;
   margin: 0 auto;
   padding: 0 40px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .logo-and-nav {
   padding: 22px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .logo a {
   display: block;
@@ -389,6 +398,8 @@ header {
   display: none;
 }
 .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
 }
@@ -401,6 +412,8 @@ header {
   opacity: 0.6;
   padding: 5px;
   margin: 0 10px;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
 }
 .menu a:not(:last-child) {
@@ -419,8 +432,12 @@ header {
 }
 .main-and-scenarios {
   padding: 29px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .section-main,
 .section-scenarios {
@@ -430,8 +447,12 @@ header {
   width: 100%;
   height: 331px;
   border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .section-main .inner-block {
   background-image: url(img/bg@1x.png);
@@ -439,7 +460,8 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 25px 20px 25px 25px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .section-main .greeting {
   font-size: 27px;
@@ -477,15 +499,23 @@ header {
 }
 /* [начало] стили для плашки */
 .billet {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   width: 200px;
   height: 120px;
   background: #F7F7F7;
   border-radius: 20px;
   padding: 14px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   background-position: 14px 14px;
   background-repeat: no-repeat;
@@ -538,6 +568,8 @@ header {
   left: 50%;
   margin-left: -8px;
   top: 13px;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
 }
 .scrolled li:nth-child(3) .billet:after {
@@ -567,9 +599,14 @@ header {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .scenarios button {
   border: none;
@@ -582,7 +619,8 @@ header {
   outline: none;
 }
 .scenarios button:focus .billet {
-  box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.9);
+  -webkit-box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.9);
+          box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.9);
 }
 .scenarios .billet {
   width: 200px;
@@ -590,15 +628,19 @@ header {
 }
 .scenarios button:hover .billet {
   background-color: #fff;
-  box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.9);
+  -webkit-box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.9);
+          box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.9);
   border-radius: 20px;
   cursor: pointer;
 }
 .scenarios button:active .billet {
   background-color: #fff;
-  box-shadow: inset 0 2px 6px 0 rgba(197, 186, 186, 0.9);
+  -webkit-box-shadow: inset 0 2px 6px 0 rgba(197, 186, 186, 0.9);
+          box-shadow: inset 0 2px 6px 0 rgba(197, 186, 186, 0.9);
 }
 .heading-and-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .heading-and-controls .controls {
@@ -611,8 +653,12 @@ header {
   padding: 5px 10px;
 }
 .top-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 25px;
 }
 .filter {
@@ -620,6 +666,8 @@ header {
   margin: 0;
   margin-left: 3px;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .section-fav-devides .section-heading {
@@ -653,6 +701,8 @@ header {
   margin-left: -40px;
 }
 .fav-devides {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0;
   padding: 0;
@@ -673,6 +723,8 @@ footer {
   margin-top: -64px;
 }
 .links-and-copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 19px 0;
 }
@@ -713,19 +765,28 @@ footer {
     display: block;
   }
   .menu-btn {
-    order: 0;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
   }
   nav {
-    order: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
     width: 100%;
   }
   nav .menu {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
     padding: 0;
     margin: 0;
     opacity: 0;
     height: 0;
+    -webkit-transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out;
     overflow: hidden;
   }

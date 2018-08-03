@@ -28,10 +28,10 @@ module.exports = {
       {
         test: /\.less$/,
         use: [
-          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
-          'less-loader'
+          devMode ?  { loader: 'style-loader', options: { sourceMap: true } } : MiniCssExtractPlugin.loader,
+          { loader: 'css-loader', options: { sourceMap: true } },
+          { loader: 'postcss-loader', options: { sourceMap: true } },
+          { loader: 'less-loader', options: { sourceMap: true } }
         ]
       }
     ]

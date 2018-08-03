@@ -255,16 +255,8 @@ body {
             }
         }
 
-        &.scrolled {
-            li {
-                &:nth-child(3) {
-                    .billet {
-                        &:after {
-                            opacity: 0;
-                        }
-                    }
-                }
-            }
+        &.scrolled li:nth-child(3) .billet:after {
+            opacity: 0;
         }
     }
 }

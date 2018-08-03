@@ -62,63 +62,66 @@ function getCursorAngle(position) {
 }
 
 // Функция-обработчик перемещения мыши на крутилке
-// Первым аргументом принимает событие.
-function handleMouseMove(e) {
-    var roundSlider = document.querySelector('.round-slider'),
+// Первым аргументом принимает положение курсора при событии mousedown
+function returnHandleMouseMove(cursorPosition) {
+    var prevPosition = cursorPosition;
+    return function handleMouseMove(e) {
+        var roundSlider = document.querySelector('.round-slider'),
         block2 = document.querySelector('.block-2'),
         block3 = document.querySelector('.block-3'),
         pointer = document.querySelector('.pointer');
 
-    var prevPositionAngle = getCursorAngle({
-            x: e.offsetX - e.movementX,
-            y: e.offsetY - e.movementY
-        }),
-        positionAngle = getCursorAngle({
-            x: e.offsetX,
-            y: e.offsetY
-        });
+        var prevPositionAngle = getCursorAngle(prevPosition),
+            positionAngle = getCursorAngle( {x: e.offsetX, y: e.offsetY});
 
-    var angle = (positionAngle - prevPositionAngle);
-    
-    if (Math.abs(angle) > 100) {
-        return;
-    } else if (getAngle(block3) + angle <= 330 && getAngle(block3) + angle >= 30) {
-        rotate(block2, (getAngle(block2) + angle));
-        rotate(block3, (getAngle(block3) + angle));
-        rotate(pointer, (getAngle(pointer) + angle));
-        displayTemperature(roundSlider, getAngle(block3));
-    } else if (getAngle(block3) + angle > 330) {
-        rotate(block2, MAX_ANGLE - 180);
-        rotate(block3, MAX_ANGLE);
-        rotate(pointer, MAX_ANGLE);
-        displayTemperature(roundSlider, getAngle(block3));
-        return;
-    } else if (getAngle(block3) + angle < 30) {
-        rotate(block2, MIN_ANGLE + 180);
-        rotate(block3, MIN_ANGLE);
-        rotate(pointer, MIN_ANGLE);
-        displayTemperature(roundSlider, getAngle(block3));
-        return;
-    } else {
-        return;
-    }
+        var angle = (positionAngle - prevPositionAngle);
+        prevPosition = {x: e.offsetX, y: e.offsetY};
+        
+        if (Math.abs(angle) > 100) {
+            return;
+        } else if (getAngle(block3) + angle <= 330 && getAngle(block3) + angle >= 30) {
+            rotate(block2, (getAngle(block2) + angle));
+            rotate(block3, (getAngle(block3) + angle));
+            rotate(pointer, (getAngle(pointer) + angle));
+            displayTemperature(roundSlider, getAngle(block3));
+        } else if (getAngle(block3) + angle > 330) {
+            rotate(block2, MAX_ANGLE - 180);
+            rotate(block3, MAX_ANGLE);
+            rotate(pointer, MAX_ANGLE);
+            displayTemperature(roundSlider, getAngle(block3));
+            return;
+        } else if (getAngle(block3) + angle < 30) {
+            rotate(block2, MIN_ANGLE + 180);
+            rotate(block3, MIN_ANGLE);
+            rotate(pointer, MIN_ANGLE);
+            displayTemperature(roundSlider, getAngle(block3));
+            return;
+        } else {
+            return;
+        }
 
-    if (getAngle(block3) < 180) {
-        block2.style.opacity = '0';
-        block3.style.opacity = '1';
-    } else {
-        block2.style.opacity = '1';
-        block3.style.opacity = '0';
+        if (getAngle(block3) < 180) {
+            block2.style.opacity = '0';
+            block3.style.opacity = '1';
+        } else {
+            block2.style.opacity = '1';
+            block3.style.opacity = '0';
+        }
     }
 }
 
 var roundSlider = document.querySelector('.round-slider');
 displayTemperature(roundSlider, getAngle(document.querySelector('.block-3')));
 
-roundSlider.addEventListener('mousedown', function () {
-    roundSlider.addEventListener('mousemove', handleMouseMove);
+roundSlider.addEventListener('mousedown', function (e) {
+    var cursorPosition = {
+        x: e.offsetX,
+        y: e.offsetY
+    }
+    // roundSlider.addEventListener('mousemove', returnHandleMouseMove(cursorPosition));
+    roundSlider.onmousemove = returnHandleMouseMove(cursorPosition);
 });
 document.addEventListener('mouseup', function () {
-    roundSlider.removeEventListener('mousemove', handleMouseMove);
+    roundSlider.onmousemove = null;
 });
 

@@ -16,7 +16,7 @@ body {
     max-width: 1366px;
     min-width: 320px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 @wrapper-padding;
     box-sizing: border-box;
 }
 
@@ -34,7 +34,7 @@ body {
     margin: 0 0 20px 0;
 }
 
-header {
+.page_header {
     border-bottom: 1px solid #f0f0f0;
 
     .logo-and-nav {
@@ -97,7 +97,7 @@ header {
     justify-content: flex-end;
     width: 200px;
     height: 120px;
-    background: #F7F7F7;
+    background: @main-button-color;
     border-radius: 20px;
     padding: 14px;
     box-sizing: border-box;
@@ -238,25 +238,25 @@ header {
             &:last-child {
                 margin-bottom: 20px;
             }
-        }
-    }
 
-    &:nth-child(3) {
-        .billet:after {
-            content: '';
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            background-image: url(../img/double-arrow-up.svg);
-            left: 50%;
-            margin-left: -8px;
-            top: 13px;
-            transition: opacity .2s ease-in-out;
+            &:nth-child(3) {
+                .billet:after {
+                    content: '';
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    background-image: url(../img/double-arrow-up.svg);
+                    left: 50%;
+                    margin-left: -8px;
+                    top: 13px;
+                    transition: opacity .2s ease-in-out;
+                }
+            }
         }
-    }
 
-    &.scrolled li:nth-child(3) .billet:after {
-        opacity: 0;
+        &.scrolled li:nth-child(3) .billet:after {
+            opacity: 0;
+        }
     }
 }
 
@@ -359,7 +359,7 @@ header {
 
             button {
                 border: none;
-                background-color: #F7F7F7;
+                background-color: @main-button-color;
                 border-radius: 20px;
                 padding: 8px 15px;
                 font-size: 13px;
@@ -383,8 +383,8 @@ header {
         overflow: hidden;
         height: 120px;
         min-height: 120px;
-        margin-right: -40px;
-        margin-left: -40px;
+        margin-right: -@wrapper-padding;
+        margin-left: -@wrapper-padding;
     }
 
     .fav-devides {
@@ -400,17 +400,17 @@ header {
             }
 
             &:first-child .billet {
-                margin-left: 40px;
+                margin-left: @wrapper-padding;
             }
 
             &:last-child .billet {
-                margin-right: 40px;
+                margin-right: @wrapper-padding;
             }
         }
     }
 }
 
-footer {
+.page_footer {
     margin-top: -64px;
 
     .links-and-copy {
@@ -461,7 +461,7 @@ footer {
 }
 
 @media only screen and (max-width: 991.98px) {
-    header {
+    .page_header {
         .menu-btn {
             display: block;
             order: 0;

@@ -8,10 +8,10 @@
 4. normalize.css для лучшей кроссбраузерности в стилях по умолчанию;
 
 Исходники лежат в папке ./src, собранный проект в папке ./dist  
-Заустить webpack-dev-server можно введя в терминале: npm run start  
-Собрать проект: npm run build  
+Заустить webpack-dev-server можно введя в терминале: `npm run start`   
+Собрать проект: `npm run build`    
 
-Опубликованная версия доступна на github pages https://evstarostin.github.io/YANDEX-SHRI-2018__TASK2/  
+Опубликованная версия доступна на github pages [https://evstarostin.github.io/YANDEX-SHRI-2018__TASK2/](https://evstarostin.github.io/YANDEX-SHRI-2018__TASK2/) 
 
 
 

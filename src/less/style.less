@@ -911,7 +911,7 @@ html {
 
         .modal-wrapper {
             position: static;
-            width: 100%;
+            width: 334px;
             height: 100%;
             box-sizing: border-box;
             transform: none;
@@ -998,8 +998,12 @@ html {
             margin-top: 15px;
             align-items: center;
 
-            button:not(:last-child) {
-                margin-bottom: 15px;
+            button {
+                width: 334px;
+                
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
             }
         }
     }

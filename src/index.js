@@ -1,3 +1,3 @@
 import 'normalize.css';
-import './less/main.less';
+import './less/style.less';
 import './js/script.js'

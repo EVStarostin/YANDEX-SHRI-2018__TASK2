@@ -485,15 +485,17 @@ html {
 /* Стили для модального окна */
 .modal {
     position: fixed;
-    display: none;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background: rgba(51,51,51,0.50);
+    display: none;
+    justify-content: center;
+    align-items: center;
 
     &.visible {
-        display: block;
+        display: flex;
     }
 
     .modal-wrapper {
@@ -517,6 +519,7 @@ html {
                 .name {
                     margin: 0;
                     margin-bottom: 6px;
+                    font-size: 27px;
                 }
             }
 
@@ -589,7 +592,7 @@ html {
             }
 
             &:after {
-                content: '-30';
+                content: '+30';
                 color: #fff;
                 font-weight: 700;
                 font-size: 18px;
@@ -607,22 +610,24 @@ html {
                     content: '';
                     display: block;
                     box-sizing: border-box;
-                    height: 60px;
-                    min-width: 520px;
+                    min-height: 60px;
+                    min-width: 100%;
+                    margin-right: -60px;
                 }
 
                 &:after {
                     content: '';
                     display: block;
                     box-sizing: border-box;
-                    height: 60px;
-                    min-width: 520px;
+                    min-height: 60px;
+                    min-width: 100%;
+                    margin-left: -60px;
                 }
 
                 .handler {
                     display: inline-block;
                     min-width: 60px;
-                    height: 60px;
+                    min-height: 60px;
                     box-sizing: border-box;
                     border-radius: 50%;
                     border: 3px solid rgba(51,51,51,0.10);
@@ -896,6 +901,104 @@ html {
 
             .controls {
                 display: none;
+            }
+        }
+    }
+
+    .modal {
+        padding: 20px;
+
+        .modal-wrapper {
+            position: static;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            transform: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+
+        .modal-content {
+            padding: 20px;
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+
+            .top-bar {
+                .dev {
+                    .name {
+                        font-size: 18px;
+                    }
+
+                    .status {
+                        font-size: 12px;
+                    }
+                }
+
+                .temp {
+                    display: none;
+                }
+            }
+
+            .mode {
+                margin-top: 15px;
+
+                li:last-child {
+                    display: none;
+                }
+            }
+
+            .temp-slider {
+                width: 60px;
+                flex: 1 1 auto;
+                align-self: center;
+                background-image: linear-gradient(180deg, #F76B1C 2%, #FFD800 51%, #068FFF 100%);
+            
+                &:before {
+                    top: auto;
+                    bottom: 5px;
+                }
+                
+                &:after {
+                    bottom: auto;
+                    top: 25px;
+                }
+
+                .inner {
+                    flex-direction: column;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    overflow-x: hidden;
+                    overflow-y: scroll;
+                    min-width: 60px;
+                    
+                    &:before {
+                        min-height: 100%;
+                        min-width: 60px;
+                        margin-right: 0;
+                        margin-bottom: -60px;
+                    }
+
+                    &:after {
+                        min-height: 100%;
+                        min-width: 60px;
+                        margin-left: 0;
+                        margin-top: -60px;
+                    }
+                }
+            }
+        }
+
+        .modal-dialog {
+            flex-direction: column;
+            margin-top: 15px;
+            align-items: center;
+
+            button:not(:last-child) {
+                margin-bottom: 15px;
             }
         }
     }

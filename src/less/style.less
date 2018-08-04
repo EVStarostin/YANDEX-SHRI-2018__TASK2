@@ -10,6 +10,17 @@ html {
         font-size: @font-size-primary;
         color: @font-color-primary;
         height: 100%;
+        &.blur {
+            overflow: hidden;
+
+            .header-and-main {
+                filter: blur(3px);
+            }
+
+            .page_footer {
+                filter: blur(3px);
+            }
+        }
     }
 }
 
@@ -468,6 +479,195 @@ html {
         font-size: 12px;
         color: @font-color-second;
         line-height: 26px;
+    }
+}
+
+/* Стили для модального окна */
+.modal {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(51,51,51,0.50);
+
+    &.visible {
+        display: block;
+    }
+
+    .modal-wrapper {
+        width: 630px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .modal-content {
+        background: #fff;
+        border-radius: 20px;
+
+        padding: 25px;
+
+        .top-bar {
+            display: flex;
+
+            .dev {
+                .name {
+                    margin: 0;
+                    margin-bottom: 6px;
+                }
+            }
+
+            .temp {
+                margin-left: auto;
+                font-size: 36px;
+                color: #333333;
+                font-weight: 700;
+
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    background-repeat: none;
+                    background-position: center;
+                    background-size: cover;
+                    vertical-align: bottom;
+                    margin-bottom: 2px;
+                }
+            }
+
+            .temp.icon_temperature_2:after {
+                background-image: url(../img/icon_temperature_2.svg);
+            }
+        }
+
+        .mode {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 25px 0;
+
+            li {
+                display: inline-block;
+                margin-right: 5px;
+            }
+
+            button {
+                background-color: #F2F1F0;
+                border: none;
+                border-radius: 20px;
+                padding: 7px 15px;
+                font-size: 13px;
+                color: #000;
+                font-weight: 700;
+
+                &.active, &:hover {
+                    background-color: #FFD93E;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .temp-slider {
+            background-image: linear-gradient(-90deg, #F76B1C 2%, #FFD800 51%, #068FFF 100%);
+            border-radius: 30px;
+            height: 60px;
+            overflow: hidden;
+            position: relative;
+
+            &:before {
+                content: '-10';
+                color: #fff;
+                font-weight: 700;
+                font-size: 18px;
+                position: absolute;
+                left: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &:after {
+                content: '-30';
+                color: #fff;
+                font-weight: 700;
+                font-size: 18px;
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .inner {
+                display: flex;
+                overflow-x: scroll;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    box-sizing: border-box;
+                    height: 60px;
+                    min-width: 520px;
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    box-sizing: border-box;
+                    height: 60px;
+                    min-width: 520px;
+                }
+
+                .handler {
+                    display: inline-block;
+                    min-width: 60px;
+                    height: 60px;
+                    box-sizing: border-box;
+                    border-radius: 50%;
+                    border: 3px solid rgba(51,51,51,0.10);
+                    box-shadow: 0 0 0 4px #fff;
+                    position: relative;
+                    z-index: 1;
+                    
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-dialog {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        button {
+            background-color: #fff;
+            border: none;
+            border-radius: 20px;
+            width: 307px;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            font-weight: 700;
+
+            &:hover {
+                cursor: pointer;
+                color: #000;
+            }
+
+            &.save-modal {
+                background-color: #FFD93E;
+                color: #000;
+
+                &:hover {
+                    background-color: #FFCD00;
+                }
+            }
+        }
     }
 }
 

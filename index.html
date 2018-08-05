@@ -231,7 +231,7 @@
         </div>
     </footer>
 
-    <div class="modal visible">
+    <div class="modal temp-modal ">
         <div class="modal-wrapper">
             <div class="modal-content">
                 <div class="top-bar">
@@ -241,12 +241,46 @@
                     </div>
                     <div class="temp icon_temperature_2">+23</div>
                 </div>
-                <ul class="mode">
-                    <li><button class="active">Вручную</button></li>
-                    <li><button>Холодно</button></li>
-                    <li><button>Тепло</button></li>
-                    <li><button>Жарко</button></li>
-                </ul>
+                <div class="mode-wrapper">
+                    <ul class="mode">
+                        <li><button class="active">Вручную</button></li>
+                        <li><button>Холодно</button></li>
+                        <li><button>Тепло</button></li>
+                        <li><button>Жарко</button></li>
+                    </ul>
+                </div>   
+                <div class="temp-slider">
+                    <div class="inner">
+                        <div class="handler"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-dialog">
+                <button class="save-modal">Применить</button>
+                <button class="close-modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal light-modal visible">
+        <div class="modal-wrapper">
+            <div class="modal-content">
+                <div class="top-bar">
+                    <div class="dev">
+                        <h2 class="name">Elgato Eve Degree Connected</h2>
+                        <span class="status">Включено</span>
+                    </div>
+                    <div class="temp icon_temperature_2">+23</div>
+                </div>
+                <div class="mode-wrapper">
+                    <ul class="mode">
+                        <li><button class="active">Вручную</button></li>
+                        <li><button>Дневной&nbsp;свет</button></li>
+                        <li><button>Вечерний&nbsp;свет</button></li>
+                        <li><button>Рассвет</button></li>
+                    </ul>
+                </div>   
                 <div class="temp-slider">
                     <div class="inner">
                         <div class="handler"></div>

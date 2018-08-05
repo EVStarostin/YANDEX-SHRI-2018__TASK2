@@ -821,12 +821,21 @@ html {
         .temperature-blocks {
             margin-top: 15px;
 
-            .label {
-                font-size: 12px;
+            &:after {
+                height: 20px;
+                width: 20px;
+                margin-left: -5px;
+                background-size: 100%;
             }
 
-            .temperature {
-                font-size: 24px;
+            .block {
+                .label {
+                    font-size: 12px;
+                }
+    
+                .temperature {
+                    font-size: 24px;
+                }
             }
         }
 

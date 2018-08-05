@@ -11,12 +11,22 @@ document.querySelector('.menu-btn').addEventListener('click', function (e) {
     document.querySelector('.header-and-main').classList.toggle('menu-visible');
 });
 
-document.querySelector('.close-modal').addEventListener('click', function(e) {
-    document.querySelector('.modal').classList.remove('visible');
+document.querySelector('.temp-modal .close-modal').addEventListener('click', function(e) {
+    document.querySelector('.temp-modal').classList.remove('visible');
     document.body.classList.remove('blur');
 });
 
-document.querySelector('.save-modal').addEventListener('click', function(e) {
-    document.querySelector('.modal').classList.remove('visible');
+document.querySelector('.temp-modal .save-modal').addEventListener('click', function(e) {
+    document.querySelector('.temp-modal').classList.remove('visible');
+    document.body.classList.remove('blur');
+});
+
+document.querySelector('.light-modal .close-modal').addEventListener('click', function(e) {
+    document.querySelector('.light-modal').classList.remove('visible');
+    document.body.classList.remove('blur');
+});
+
+document.querySelector('.light-modal .save-modal').addEventListener('click', function(e) {
+    document.querySelector('.light-modal').classList.remove('visible');
     document.body.classList.remove('blur');
 });

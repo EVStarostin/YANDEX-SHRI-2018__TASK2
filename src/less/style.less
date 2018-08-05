@@ -547,15 +547,26 @@ html {
             }
         }
 
+        .mode-wrapper {
+            overflow: hidden;
+            height: 30px;
+            max-height: 30px;
+            position: relative;
+            margin: 15px 0 25px;
+        }
+
         .mode {
             list-style: none;
             padding: 0;
-            margin: 20px 0 15px 0;
+            margin: 0;
+            display: flex;
+            overflow-x: scroll;
+            width: 100%;
+            position: absolute;
 
             li {
                 display: inline-block;
                 margin-right: 5px;
-                margin-bottom: 10px;
             }
 
             button {
@@ -565,7 +576,7 @@ html {
                 padding: 7px 15px;
                 font-size: 13px;
                 color: #000;
-                font-weight: 700;
+                margin: 1px;
 
                 &.active, &:hover {
                     background-color: #FFD93E;
@@ -575,14 +586,13 @@ html {
         }
 
         .temp-slider {
-            background-image: linear-gradient(-90deg, #F76B1C 2%, #FFD800 51%, #068FFF 100%);
             border-radius: 30px;
             height: 60px;
             overflow: hidden;
             position: relative;
 
             &:before {
-                content: '-10';
+                content: '';
                 color: #fff;
                 font-weight: 700;
                 font-size: 18px;
@@ -593,7 +603,7 @@ html {
             }
 
             &:after {
-                content: '+30';
+                content: '';
                 color: #fff;
                 font-weight: 700;
                 font-size: 18px;
@@ -672,6 +682,40 @@ html {
                 &:hover {
                     background-color: #FFCD00;
                 }
+            }
+        }
+    }
+
+    &.temp-modal {
+        .temp-slider {
+            background-image: linear-gradient(-90deg, #F76B1C 2%, #FFD800 51%, #068FFF 100%);
+
+            &:before {
+                content: '-10';
+            }
+
+            &:after {
+                content: '+30';
+            }
+        }
+    }
+    
+    &.light-modal {
+        .temp-slider {
+            background-image: linear-gradient(-85deg, #FF9E00 2%, #FFE682 98%);
+
+            &:before {
+                width: 40px;
+                height: 40px;
+                left: 10px;
+                background: url(../img/icon_sun_min.svg) no-repeat center;
+            }
+
+            &:after {
+                width: 40px;
+                height: 40px;
+                right: 10px;
+                background: url(../img/icon_sun_max.svg) no-repeat center;
             }
         }
     }
@@ -943,14 +987,6 @@ html {
                 }
             }
 
-            .mode {
-                margin-top: 15px;
-
-                li:last-child {
-                    display: none;
-                }
-            }
-
             .temp-slider {
                 width: 60px;
                 flex: 1 1 auto;
@@ -1004,6 +1040,20 @@ html {
                 
                 &:not(:last-child) {
                     margin-bottom: 15px;
+                }
+            }
+        }
+
+        &.light-modal {
+            .temp-slider {
+                background-image: linear-gradient(180deg, #FF9E00 2%, #FFE682 98%);
+    
+                &:before {
+                    bottom: -10px;
+                }
+    
+                &:after {
+                    top: 30px;
                 }
             }
         }

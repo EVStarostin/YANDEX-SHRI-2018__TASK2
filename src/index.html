@@ -146,11 +146,11 @@
                     <div class="top-bar">
                         <h2 class="section-heading">Избранные устройства</h2>
                         <ul class="filter">
-                            <li><button class="active">Все</button></li>
-                            <li><button>Кухня</button></li>
-                            <li><button>Зал</button></li>
-                            <li><button>Лампочки</button></li>
-                            <li><button>Камеры</button></li>
+                            <li><button class="active" data-filter="Все">Все</button></li>
+                            <li><button data-filter="Кухня">Кухня</button></li>
+                            <li><button data-filter="Зал">Зал</button></li>
+                            <li><button data-filter="Лампочки">Лампочки</button></li>
+                            <li><button data-filter="Камеры">Камеры</button></li>
                         </ul>
                         <div class="controls">
                             <button class="left">
@@ -163,52 +163,79 @@
                     </div>
                     <div class="fav-devides-slider">
                         <ul class="fav-devides">
-                            <li>
-                                <span class="billet icon_temperature_2">
-                                <p class="name">Xiaomi Yeelight LED Smart Bulb</p>
-                                <p class="action">Включено</p>
-                            </span>
+                            <li data-filter="Лампочки">
+                                <button>
+                                    <span class="billet icon_temperature_2">
+                                        <p class="name">Xiaomi Yeelight LED Smart Bulb</p>
+                                        <p class="action">Включено</p>
+                                    </span>
+                                </button>
                             </li>
-                            <li>
-                                <span class="billet icon_sun">
-                                <p class="name">D-Link Omna 180 Cam</p>
-                                <p class="action">Включится в 17:00</p>
-                            </span>
+                            <li data-filter="Камеры">
+                                <button>
+                                    <span class="billet icon_sun">
+                                        <p class="name">D-Link Omna 180 Cam</p>
+                                        <p class="action">Включится в 17:00</p>
+                                    </span>
+                                </button>
                             </li>
-                            <li>
-                                <span class="billet icon_temperature">
-                                <p class="name">Elgato Eve Degree Connected</p>
-                                <p class="action">Выключено до 17:00</p>
-                            </span>
+                            <li data-filter="Зал">
+                                <button>
+                                    <span class="billet icon_temperature">
+                                        <p class="name">Elgato Eve Degree Connected</p>
+                                        <p class="action">Выключено до 17:00</p>
+                                    </span>
+                                </button>
                             </li>
-                            <li>
-                                <span class="billet icon_sun">
-                                <p class="name">LIFX Mini Day & Dusk A60 E27</p>
-                                <p class="action">Включится в 17:00</p>
-                            </span>
+                            <li data-filter="Зал">
+                                <button>
+                                    <span class="billet icon_sun">
+                                        <p class="name">LIFX Mini Day & Dusk A60 E27</p>
+                                        <p class="action">Включится в 17:00</p>
+                                    </span>
+                                </button>
                             </li>
-                            <li>
-                                <span class="billet icon_sun_2">
-                                <p class="name">Xiaomi Mi Air Purifier 2S</p>
-                                <p class="action">Включено</p>
-                            </span>
+                            <li data-filter="Зал">
+                                <button>
+                                    <span class="billet icon_sun_2">
+                                        <p class="name">Xiaomi Mi Air Purifier 2S</p>
+                                        <p class="action">Включено</p>
+                                    </span>
+                                </button>
                             </li>
-                            <li>
-                                <span class="billet icon_sun">
-                                <p class="name">Philips Zhirui</p>
-                                <p class="action">Выключено</p>
-                            </span>
+                            <li data-filter="Кухня">
+                                <button>
+                                    <span class="billet icon_sun">
+                                        <p class="name">Philips Zhirui</p>
+                                        <p class="action">Выключено</p>
+                                    </span>
+                                </button>
                             </li>
-                            <li>
-                                <span class="billet icon_sun_2">
-                                <p class="name">Xiaomi Mi Air Purifier 2S</p>
-                                <p class="action">Включено</p>
-                            </span>
+                            <li data-filter="Кухня">
+                                <button>
+                                    <span class="billet icon_sun_2">
+                                        <p class="name">Xiaomi Mi Air Purifier 2S</p>
+                                        <p class="action">Включено</p>
+                                    </span>
+                                </button>
                             </li>
-                            <!--
-                            <li><span class="billet"></span></li>
-                            <li><span class="billet"></span></li>
-                            <li><span class="billet"></span></li>
+                            <!-- 
+                            <li data-filter="Кухня">
+                                <button>
+                                    <span class="billet icon_sun">
+                                        <p class="name">LIFX Mini Day & Dusk A60 E27</p>
+                                        <p class="action">Включится в 17:00</p>
+                                    </span>
+                                </button>
+                            </li>
+                            <li data-filter="Кухня">
+                                <button>
+                                    <span class="billet icon_temperature">
+                                        <p class="name">Elgato Eve Degree Connected</p>
+                                        <p class="action">Выключено до 17:00</p>
+                                    </span>
+                                </button>
+                            </li> 
                             -->
                         </ul>
                     </div>

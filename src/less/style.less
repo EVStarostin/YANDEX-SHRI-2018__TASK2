@@ -324,6 +324,7 @@ html {
             margin: 0;
             padding: 0;
             background: none;
+            border-radius: 20px;
 
             .billet {
                 width: 200px;
@@ -332,26 +333,19 @@ html {
 
             &:focus {
                 outline: none;
-
-                .billet {
-                    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.90);
-                }
+                box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.90);
             }
 
-            &:hover {
-                .billet {
-                    background-color: #fff;
-                    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.90);
-                    border-radius: @border-radius-primary;
-                    cursor: pointer;
-                }
+            &:hover .billet {
+                background-color: #fff;
+                box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.90);
+                border-radius: @border-radius-primary;
+                cursor: pointer;
             }
 
-            &:active {
-                .billet {
-                    background-color: #fff;
-                    box-shadow: inset 0 2px 6px 0 rgba(197, 186, 186, 0.90);
-                }
+            &:active .billet {
+                background-color: #fff;
+                box-shadow: inset 0 2px 6px 0 rgba(197, 186, 186, 0.90);
             }
         }
     }
@@ -410,8 +404,8 @@ html {
 
     .fav-devides-slider {
         overflow: hidden;
-        height: 120px;
-        min-height: 120px;
+        height: 126px;
+        min-height: 126px;
         margin-right: -@wrapper-side-padding;
         margin-left: -@wrapper-side-padding;
     }
@@ -419,19 +413,58 @@ html {
     .fav-devides {
         display: flex;
         margin: 0;
-        padding: 0;
+        padding: 1px 0 5px;
         list-style: none;
         overflow-x: scroll;
+
+        &:before {
+            content: '';
+            display: block;
+            height: 100px;
+            min-width: @wrapper-side-padding;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            height: 100px;
+            min-width: @wrapper-side-padding;
+        }
 
         li {
             margin-right: 15px;
 
             &:first-child {
-                margin-left: @wrapper-side-padding;
+                margin-left: 0;
             }
 
             &:last-child {
-                margin-right: @wrapper-side-padding;
+                margin-right: 0;
+            }
+
+            button {
+                border: none;
+                margin: 0;
+                padding: 0;
+                background: none;
+                border-radius: 20px;
+
+                &:focus {
+                    outline: none;
+                    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.90);
+                }
+
+                &:hover .billet {
+                    background-color: #fff;
+                    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.90);
+                    border-radius: @border-radius-primary;
+                    cursor: pointer;
+                }
+    
+                &:active .billet {
+                    background-color: #fff;
+                    box-shadow: inset 0 2px 6px 0 rgba(197, 186, 186, 0.90);
+                }
             }
         }
     }
@@ -547,7 +580,8 @@ html {
             height: 30px;
             max-height: 30px;
             position: relative;
-            margin: 15px 0 25px;
+            margin: 15px -25px 25px -25px;
+            box-sizing: border-box;
         }
 
         .mode {
@@ -559,9 +593,27 @@ html {
             width: 100%;
             position: absolute;
 
+            &:before {
+                content: '';
+                display: block;
+                height: 30px;
+                min-width: 25px;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                height: 30px;
+                min-width: 25px;
+            }
+
             li {
                 display: inline-block;
                 margin-right: 5px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
             }
 
             button {
@@ -910,6 +962,13 @@ html {
             flex-wrap: nowrap;
             overflow-y: auto;
 
+            &:before {
+                content: '';
+                display: block;
+                height: 100px;
+                min-width: @wrapper-side-padding;
+            }
+
             &:after {
                 content: '';
                 display: block;
@@ -921,7 +980,7 @@ html {
                 margin: 2px 15px 5px 0;
 
                 &:first-child {
-                    margin-left: @wrapper-side-padding;
+                    margin-left: 0;
                 }
     
                 &:last-child {
@@ -938,6 +997,13 @@ html {
         }
 
         .fav-devides {
+            &:before {
+                content: '';
+                display: block;
+                height: 100px;
+                min-width: @wrapper-side-padding;
+            }
+
             &:after {
                 content: '';
                 display: block;
@@ -947,7 +1013,7 @@ html {
 
             li {
                 &:first-child {
-                    margin-left: @wrapper-side-padding;
+                    margin-left: 0;
                 }
     
                 &:last-child {
@@ -1001,6 +1067,26 @@ html {
 
                 .temp {
                     display: none;
+                }
+            }
+
+            .mode-wrapper {
+                margin: 15px -@wrapper-side-padding 25px -@wrapper-side-padding;
+            }
+
+            .mode {
+                &:before {
+                    content: '';
+                    display: block;
+                    height: 30px;
+                    min-width: @wrapper-side-padding;
+                }
+    
+                &:after {
+                    content: '';
+                    display: block;
+                    height: 30px;
+                    min-width: @wrapper-side-padding;
                 }
             }
 

@@ -11,14 +11,11 @@ html {
         color: @font-color-primary;
         height: 100%;
         &.blur {
-            overflow: hidden;
-
-            .header-and-main {
+            .header_main_footer {
                 filter: blur(3px);
-            }
-
-            .page_footer {
-                filter: blur(3px);
+                overflow: hidden;
+                min-height: 100%;
+                height: 100%;
             }
         }
     }

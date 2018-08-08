@@ -9,7 +9,7 @@
     <title>Яндекс Дом</title>
 </head>
 
-<body class="blur">
+<body>
     <div class="page-wrapper">
         <div class="header-and-main clr">
             <header class="page_header">
@@ -143,7 +143,7 @@
                             </div>
                         </section>
                     </div>
-                    <section class="section-fav-devides">
+                    <section class="section-fav-devices">
                         <div class="top-bar">
                             <h2 class="section-heading">Избранные устройства</h2>
                             <ul class="filter">
@@ -162,9 +162,9 @@
                             </button>
                             </div>
                         </div>
-                        <div class="fav-devides-slider">
-                            <ul class="fav-devides">
-                                <li data-filter="Лампочки">
+                        <div class="fav-devices-slider">
+                            <ul class="fav-devices">
+                                <li data-filter="Лампочки" data-type="temp" data-power="on">
                                     <button>
                                         <span class="billet icon_temperature_2">
                                             <p class="name">Xiaomi Yeelight LED Smart Bulb</p>
@@ -172,7 +172,7 @@
                                         </span>
                                     </button>
                                 </li>
-                                <li data-filter="Камеры">
+                                <li data-filter="Камеры" data-type="light" data-power="off">
                                     <button>
                                         <span class="billet icon_sun">
                                             <p class="name">D-Link Omna 180 Cam</p>
@@ -180,7 +180,7 @@
                                         </span>
                                     </button>
                                 </li>
-                                <li data-filter="Зал">
+                                <li data-filter="Зал" data-type="temp" data-power="off">
                                     <button>
                                         <span class="billet icon_temperature">
                                             <p class="name">Elgato Eve Degree Connected</p>
@@ -188,7 +188,7 @@
                                         </span>
                                     </button>
                                 </li>
-                                <li data-filter="Зал">
+                                <li data-filter="Зал" data-type="light" data-power="off">
                                     <button>
                                         <span class="billet icon_sun">
                                             <p class="name">LIFX Mini Day & Dusk A60 E27</p>
@@ -196,7 +196,7 @@
                                         </span>
                                     </button>
                                 </li>
-                                <li data-filter="Зал">
+                                <li data-filter="Зал" data-type="light" data-power="on">
                                     <button>
                                         <span class="billet icon_sun_2">
                                             <p class="name">Xiaomi Mi Air Purifier 2S</p>
@@ -204,7 +204,7 @@
                                         </span>
                                     </button>
                                 </li>
-                                <li data-filter="Кухня">
+                                <li data-filter="Кухня" data-type="light" data-power="off">
                                     <button>
                                         <span class="billet icon_sun">
                                             <p class="name">Philips Zhirui</p>
@@ -212,7 +212,7 @@
                                         </span>
                                     </button>
                                 </li>
-                                <li data-filter="Кухня">
+                                <li data-filter="Кухня" data-type="light" data-power="on">
                                     <button>
                                         <span class="billet icon_sun_2">
                                             <p class="name">Xiaomi Mi Air Purifier 2S</p>
@@ -221,7 +221,7 @@
                                     </button>
                                 </li>
                                 <!-- 
-                                <li data-filter="Кухня">
+                                <li data-filter="Кухня" data-type="light" data-power="off">
                                     <button>
                                         <span class="billet icon_sun">
                                             <p class="name">LIFX Mini Day & Dusk A60 E27</p>
@@ -229,14 +229,14 @@
                                         </span>
                                     </button>
                                 </li>
-                                <li data-filter="Кухня">
+                                <li data-filter="Кухня" data-type="temp" data-power="off">
                                     <button>
                                         <span class="billet icon_temperature">
                                             <p class="name">Elgato Eve Degree Connected</p>
                                             <p class="action">Выключено до 17:00</p>
                                         </span>
                                     </button>
-                                </li> 
+                                </li>
                                 -->
                             </ul>
                         </div>
@@ -260,7 +260,7 @@
         </footer>
     </div>
 
-    <div class="modal temp-modal ">
+    <div class="modal temp-modal">
         <div class="modal-wrapper">
             <div class="modal-content">
                 <div class="top-bar">
@@ -268,7 +268,7 @@
                         <h2 class="name">Elgato Eve Degree Connected</h2>
                         <span class="status">Включено</span>
                     </div>
-                    <div class="temp icon_temperature_2">+23</div>
+                    <div class="icon icon-temp powerOn">+23</div>
                 </div>
                 <div class="mode-wrapper">
                     <ul class="mode">
@@ -292,7 +292,7 @@
         </div>
     </div>
 
-    <div class="modal light-modal visible">
+    <div class="modal light-modal">
         <div class="modal-wrapper">
             <div class="modal-content">
                 <div class="top-bar">
@@ -300,7 +300,7 @@
                         <h2 class="name">Xiaomi Yeelight LED Smart Bulb</h2>
                         <span class="status">Включится в 17:00</span>
                     </div>
-                    <div class="temp icon_temperature_2">+23</div>
+                    <div class="icon icon-light powerOff"></div>
                 </div>
                 <div class="mode-wrapper">
                     <ul class="mode">

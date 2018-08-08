@@ -106,6 +106,7 @@ for (var i = 0; i < favDevices.length; i++) {
                 modal.querySelector('.icon-temp').classList.add('powerOff');
             }
             modal.classList.add('visible');
+            document.querySelector('.page-wrapper').classList.add('blur');
         } else if (this.parentElement.dataset.type === 'light') {
             var modal = document.querySelector('.light-modal');
             modal.querySelector('.name').innerText = this.querySelector('.name').innerText;
@@ -118,6 +119,7 @@ for (var i = 0; i < favDevices.length; i++) {
                 modal.querySelector('.icon-light').classList.add('powerOff');
             }
             modal.classList.add('visible');
+            document.querySelector('.page-wrapper').classList.add('blur');
         }
     });
 }

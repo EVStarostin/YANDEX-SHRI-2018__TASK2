@@ -235,6 +235,7 @@ function handleRotateFloorSlider() {
     function returnHandleMouseMove(cursorPosition) {
         var prevPosition = cursorPosition;
         return function handleMouseMove(e) {
+            e.stopImmediatePropagation();
             e.preventDefault();
             var roundSlider = document.querySelector('.round-slider'),
             block2 = document.querySelector('.block-2'),

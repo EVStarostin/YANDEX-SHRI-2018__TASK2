@@ -232,11 +232,7 @@ function handleRotateFloorSlider() {
     function returnHandleMouseMove(cursorPosition) {
         var prevPosition = cursorPosition;
         return function handleMouseMove(e) {
-            // e.preventDefault();
             e.stopImmediatePropagation();
-            // document.body.ontouchmove = function(e) {
-            //     e.preventDefault();
-            // }
             var roundSlider = document.querySelector('.round-slider'),
             block2 = document.querySelector('.block-2'),
             block3 = document.querySelector('.block-3'),

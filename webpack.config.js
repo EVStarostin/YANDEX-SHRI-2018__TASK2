@@ -40,6 +40,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/index.html"
     }),
-    new MiniCssExtractPlugin({})
+    new MiniCssExtractPlugin({
+      filename: devMode ? '[name].css' : '[name].[hash].css'
+    })
   ]
 }

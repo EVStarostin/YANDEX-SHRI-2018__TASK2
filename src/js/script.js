@@ -94,6 +94,9 @@ for (var i = 0; i < modes.length; i++) {
 var favDevices = document.querySelectorAll('.fav-devices button');
 for (var i = 0; i < favDevices.length; i++) {
     favDevices[i].addEventListener('click', function() {
+        document.body.ontouchmove = function(e) {
+            e.preventDefault();
+        }
         if (this.parentElement.dataset.type === 'temp') {
             var modal = document.querySelector('.temp-modal');
             modal.querySelector('.name').innerText = this.querySelector('.name').innerText;

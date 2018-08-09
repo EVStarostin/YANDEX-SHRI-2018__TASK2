@@ -95,6 +95,7 @@ var favDevices = document.querySelectorAll('.fav-devices button');
 for (var i = 0; i < favDevices.length; i++) {
     favDevices[i].addEventListener('click', function() {
         document.body.ontouchmove = function(e) {
+            e.stopImmediatePropagation();
             e.preventDefault();
         }
         if (this.parentElement.dataset.type === 'temp') {
@@ -322,3 +323,8 @@ document.querySelector('.floor-modal .save-modal').addEventListener('click', fun
     document.querySelector('.floor-modal').classList.remove('visible');
     document.querySelector('.page-wrapper').classList.remove('blur');
 });
+
+document.querySelector('.modal-content').addEventListener('touchmove', function(e) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+})

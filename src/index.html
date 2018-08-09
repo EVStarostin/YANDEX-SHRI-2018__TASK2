@@ -180,6 +180,14 @@
                                         </span>
                                     </button>
                                 </li>
+                                <li data-filter="Кухня" data-type="floor" data-power="on">
+                                    <button>
+                                        <span class="billet icon_temperature_2">
+                                            <p class="name">Xiaomi Warm Floor</p>
+                                            <p class="action">Включено</p>
+                                        </span>
+                                    </button>
+                                </li>
                                 <li data-filter="Зал" data-type="temp" data-power="off">
                                     <button>
                                         <span class="billet icon_temperature">
@@ -209,14 +217,6 @@
                                         <span class="billet icon_sun">
                                             <p class="name">Philips Zhirui</p>
                                             <p class="action">Выключено</p>
-                                        </span>
-                                    </button>
-                                </li>
-                                <li data-filter="Кухня" data-type="light" data-power="on">
-                                    <button>
-                                        <span class="billet icon_sun_2">
-                                            <p class="name">Xiaomi Mi Air Purifier 2S</p>
-                                            <p class="action">Включено</p>
                                         </span>
                                     </button>
                                 </li>
@@ -314,6 +314,32 @@
                     <div class="inner">
                         <div class="handler"></div>
                     </div>
+                </div>
+            </div>
+
+            <div class="modal-dialog">
+                <button class="save-modal">Применить</button>
+                <button class="close-modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal floor-modal">
+        <div class="modal-wrapper">
+            <div class="modal-content">
+                <div class="top-bar">
+                    <div class="dev">
+                        <h2 class="name">Xiaomi Warm Floor</h2>
+                        <span class="status">Включено</span>
+                    </div>
+                    <div class="icon icon-temp powerOn">+23</div>
+                </div>  
+                <div class="round-slider" data-after="+23">
+                    <div class="block block-1"></div>
+                    <div class="block block-2"></div>
+                    <div class="block block-3"></div>
+                    <div class="block block-4"></div>
+                    <div class="pointer"></div>
                 </div>
             </div>
 

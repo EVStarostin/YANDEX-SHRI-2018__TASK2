@@ -94,10 +94,6 @@ for (var i = 0; i < modes.length; i++) {
 var favDevices = document.querySelectorAll('.fav-devices button');
 for (var i = 0; i < favDevices.length; i++) {
     favDevices[i].addEventListener('click', function() {
-        document.body.ontouchmove = function(e) {
-            e.stopImmediatePropagation();
-            e.preventDefault();
-        }
         if (this.parentElement.dataset.type === 'temp') {
             var modal = document.querySelector('.temp-modal');
             modal.querySelector('.name').innerText = this.querySelector('.name').innerText;
@@ -236,7 +232,6 @@ function handleRotateFloorSlider() {
     function returnHandleMouseMove(cursorPosition) {
         var prevPosition = cursorPosition;
         return function handleMouseMove(e) {
-            e.stopImmediatePropagation();
             e.preventDefault();
             var roundSlider = document.querySelector('.round-slider'),
             block2 = document.querySelector('.block-2'),
@@ -323,8 +318,3 @@ document.querySelector('.floor-modal .save-modal').addEventListener('click', fun
     document.querySelector('.floor-modal').classList.remove('visible');
     document.querySelector('.page-wrapper').classList.remove('blur');
 });
-
-document.querySelector('.modal-content').addEventListener('touchmove', function(e) {
-    e.preventDefault();
-    e.stopImmediatePropagation();
-})

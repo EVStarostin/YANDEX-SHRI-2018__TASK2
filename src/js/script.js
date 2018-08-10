@@ -17,6 +17,8 @@ document.querySelector('.menu-btn').addEventListener('click', function () {
 var filterButtons = document.querySelectorAll('.section-fav-devices .filter button');
 for (var i = 0; i < filterButtons.length; i++) {
     filterButtons[i].addEventListener('click', function() {
+        document.querySelector('.filter').classList.remove('visible');
+        document.querySelector('.show-filter-btn').innerText = this.innerText;
         /* Добавляем нажатой кнопке класс active, у остальных кнопок удаляем */
         this.classList.add('active');
         for (var j = 0; j < filterButtons.length; j++) {
@@ -317,4 +319,9 @@ document.querySelector('.floor-modal .close-modal').addEventListener('click', fu
 document.querySelector('.floor-modal .save-modal').addEventListener('click', function() {
     document.querySelector('.floor-modal').classList.remove('visible');
     document.querySelector('.page-wrapper').classList.remove('blur');
+});
+
+/* Показывать/прятать меню фильтра в мобильной версии */
+document.querySelector('.show-filter-btn').addEventListener('click', function() {
+    document.querySelector('.filter').classList.toggle('visible');
 });

@@ -1,3 +1,5 @@
 import 'normalize.css';
-import './less/style.less';
+import './less/main.less';
+import './less/retina.less';
+import './less/mobile.less';
 import './js/script.js'

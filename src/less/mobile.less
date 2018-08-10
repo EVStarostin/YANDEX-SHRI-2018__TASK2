@@ -67,6 +67,7 @@
     .main-and-scenarios {
         flex-direction: column;
         padding-top: 0;
+        padding-bottom: 20px;
 
         .section-main,
         .section-scenarios {
@@ -247,6 +248,7 @@
 
         .top-bar {
             flex-wrap: wrap;
+            margin-bottom: 20px;
 
             .show-filter-btn {
                 margin-left: auto;
@@ -266,7 +268,7 @@
             .filter {
                 opacity: 0;
                 height: 0;
-                margin: 10px 0 0;
+                margin: 0;
                 flex-wrap: wrap;
                 justify-content: space-between;
                 transition: all .2s ease-in-out;
@@ -274,6 +276,7 @@
                 &.visible {
                     opacity: 1;
                     height: 80px;
+                    margin-top: 10px;
                 }
 
                 button {

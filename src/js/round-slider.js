@@ -1,7 +1,3 @@
-/* Предзагрузка svg картинки */
-var pic = new Image();
-pic.src = '../img/termo.svg';
-
 /* Обработка вращения слайдера */
 window.addEventListener('load', rotateFloorSlider);
 function rotateFloorSlider() {

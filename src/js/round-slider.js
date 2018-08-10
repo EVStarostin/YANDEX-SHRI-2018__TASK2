@@ -3,8 +3,8 @@ var pic = new Image();
 pic.src = '../img/termo.svg';
 
 /* Обработка вращения слайдера */
-window.addEventListener('load', handleRotateFloorSlider);
-function handleRotateFloorSlider() {
+window.addEventListener('load', rotateFloorSlider);
+function rotateFloorSlider() {
     // Константы
     var MIN_ANGLE = 30,
     MAX_ANGLE = 330,
@@ -74,22 +74,22 @@ function handleRotateFloorSlider() {
         var prevPosition = cursorPosition;
         return function handleMouseMove(e) {
             e.preventDefault();
+
             var roundSlider = document.querySelector('.round-slider'),
             block2 = document.querySelector('.block-2'),
             block3 = document.querySelector('.block-3'),
             pointer = document.querySelector('.pointer');
 
-            var prevPositionAngle = getCursorAngle(prevPosition);
-            var positionAngle = getCursorAngle( {
-                x: e.targetTouches ? e.targetTouches[0].pageX - e.target.getBoundingClientRect().left : e.offsetX, 
-                y: e.targetTouches ? e.targetTouches[0].pageY - e.target.getBoundingClientRect().top : e.offsetY
-            } );
-
-            var angle = (positionAngle - prevPositionAngle);
-            prevPosition = {
+            var nextPosition = {
                 x: e.targetTouches ? e.targetTouches[0].pageX - e.target.getBoundingClientRect().left : e.offsetX, 
                 y: e.targetTouches ? e.targetTouches[0].pageY - e.target.getBoundingClientRect().top : e.offsetY
             };
+
+            var prevPositionAngle = getCursorAngle(prevPosition);
+            var nextPositionAngle = getCursorAngle(nextPosition);
+
+            var angle = (nextPositionAngle - prevPositionAngle);
+            prevPosition = nextPosition;
             
             if (Math.abs(angle) > 100) {
                 return;
@@ -135,10 +135,7 @@ function handleRotateFloorSlider() {
     });
 
     roundSlider.addEventListener('mousedown', function (e) {
-        var cursorPosition = {
-            x: e.offsetX,
-            y: e.offsetY
-        }
+        var cursorPosition = { x: e.offsetX, y: e.offsetY };
         roundSlider.onmousemove = returnHandleMouseMove(cursorPosition);
     });
     

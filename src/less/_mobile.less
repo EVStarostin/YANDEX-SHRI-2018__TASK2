@@ -300,11 +300,14 @@
             width: 334px;
             height: 100%;
             box-sizing: border-box;
-            transform: none;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            
+            transform-origin: bottom center;
+
+            &.animate {
+                transform: none;
+            }
         }
 
         .modal-content {

@@ -99,8 +99,7 @@ for (var i = 0; i < favDevices.length; i++) {
             modal.querySelector('.modal-wrapper').style.top = this.offsetTop + 'px';
             modal.classList.add('visible');
             setTimeout(function() {
-                modal.querySelector('.modal-wrapper').style.left = '50%';
-                modal.querySelector('.modal-wrapper').style.top = '50%';
+                modal.querySelector('.modal-wrapper').style.cssText = '';
                 modal.querySelector('.modal-wrapper').classList.add('animate');
                 document.querySelector('.page-wrapper').classList.add('blur');
             }, 10);
@@ -121,8 +120,7 @@ for (var i = 0; i < favDevices.length; i++) {
             modal.querySelector('.modal-wrapper').style.top = this.offsetTop + 'px';
             modal.classList.add('visible');
             setTimeout(function() {
-                modal.querySelector('.modal-wrapper').style.left = '50%';
-                modal.querySelector('.modal-wrapper').style.top = '50%';
+                modal.querySelector('.modal-wrapper').style.cssText = '';
                 modal.querySelector('.modal-wrapper').classList.add('animate');
                 document.querySelector('.page-wrapper').classList.add('blur');
             }, 10);
@@ -143,8 +141,7 @@ for (var i = 0; i < favDevices.length; i++) {
             modal.querySelector('.modal-wrapper').style.top = this.offsetTop + 'px';
             modal.classList.add('visible');
             setTimeout(function() {
-                modal.querySelector('.modal-wrapper').style.left = '50%';
-                modal.querySelector('.modal-wrapper').style.top = '50%';
+                modal.querySelector('.modal-wrapper').style.cssText = '';
                 modal.querySelector('.modal-wrapper').classList.add('animate');
                 document.querySelector('.page-wrapper').classList.add('blur');
             }, 10);

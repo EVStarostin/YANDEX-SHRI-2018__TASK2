@@ -264,13 +264,16 @@
             }
 
             .filter {
-                display: none;
+                opacity: 0;
+                height: 0;
                 margin: 10px 0 0;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                transition: all .2s ease-in-out;
 
                 &.visible {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
+                    opacity: 1;
+                    height: 80px;
                 }
 
                 button {

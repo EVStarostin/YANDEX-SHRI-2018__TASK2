@@ -94,21 +94,17 @@ for (var i = 0; i < favDevices.length; i++) {
                 modal.querySelector('.icon-temp').classList.remove('powerOn');
                 modal.querySelector('.icon-temp').classList.add('powerOff');
             }
+
             modal.querySelector('.modal-wrapper').style.left = this.offsetLeft + 'px';
             modal.querySelector('.modal-wrapper').style.top = this.offsetTop + 'px';
-            modal.querySelector('.modal-wrapper').style.transform = 'scale(.3)';
-            modal.querySelector('.modal-wrapper').style.transformOrigin = 'top left';
-            modal.querySelector('.modal-wrapper').style.transition = 'all .3s ease-out';
-
+            modal.classList.add('visible');
             setTimeout(function() {
                 modal.querySelector('.modal-wrapper').style.left = '50%';
                 modal.querySelector('.modal-wrapper').style.top = '50%';
-                modal.querySelector('.modal-wrapper').style.overflow = 'auto';
-                modal.querySelector('.modal-wrapper').style.transform = 'translate(-50%, -50%) scale(1)';
-            }, 1);
+                modal.querySelector('.modal-wrapper').classList.add('animate');
+                document.querySelector('.page-wrapper').classList.add('blur');
+            }, 10);
 
-            modal.classList.add('visible');
-            document.querySelector('.page-wrapper').classList.add('blur');
         } else if (this.parentElement.dataset.type === 'light') {
             var modal = document.querySelector('.light-modal');
             modal.querySelector('.name').innerText = this.querySelector('.name').innerText;
@@ -120,8 +116,17 @@ for (var i = 0; i < favDevices.length; i++) {
                 modal.querySelector('.icon-light').classList.remove('powerOn');
                 modal.querySelector('.icon-light').classList.add('powerOff');
             }
+           
+            modal.querySelector('.modal-wrapper').style.left = this.offsetLeft + 'px';
+            modal.querySelector('.modal-wrapper').style.top = this.offsetTop + 'px';
             modal.classList.add('visible');
-            document.querySelector('.page-wrapper').classList.add('blur');
+            setTimeout(function() {
+                modal.querySelector('.modal-wrapper').style.left = '50%';
+                modal.querySelector('.modal-wrapper').style.top = '50%';
+                modal.querySelector('.modal-wrapper').classList.add('animate');
+                document.querySelector('.page-wrapper').classList.add('blur');
+            }, 10);
+
         } else if (this.parentElement.dataset.type === 'floor') {
             var modal = document.querySelector('.floor-modal');
             modal.querySelector('.name').innerText = this.querySelector('.name').innerText;
@@ -133,8 +138,16 @@ for (var i = 0; i < favDevices.length; i++) {
                 modal.querySelector('.icon-temp').classList.remove('powerOn');
                 modal.querySelector('.icon-temp').classList.add('powerOff');
             }
+            
+            modal.querySelector('.modal-wrapper').style.left = this.offsetLeft + 'px';
+            modal.querySelector('.modal-wrapper').style.top = this.offsetTop + 'px';
             modal.classList.add('visible');
-            document.querySelector('.page-wrapper').classList.add('blur');
+            setTimeout(function() {
+                modal.querySelector('.modal-wrapper').style.left = '50%';
+                modal.querySelector('.modal-wrapper').style.top = '50%';
+                modal.querySelector('.modal-wrapper').classList.add('animate');
+                document.querySelector('.page-wrapper').classList.add('blur');
+            }, 10);
         }
     });
 }
@@ -142,36 +155,42 @@ for (var i = 0; i < favDevices.length; i++) {
 /* Закрывать модальное окно регулировки температуры по кнопке Закрыть */
 document.querySelector('.temp-modal .close-modal').addEventListener('click', function() {
     document.querySelector('.temp-modal').classList.remove('visible');
+    document.querySelector('.temp-modal .modal-wrapper').classList.remove('animate');
     document.querySelector('.page-wrapper').classList.remove('blur');
 });
 
 /* Закрывать модальное окно регулировки температуры по кнопке Применить */
 document.querySelector('.temp-modal .save-modal').addEventListener('click', function() {
     document.querySelector('.temp-modal').classList.remove('visible');
+    document.querySelector('.temp-modal .modal-wrapper').classList.remove('animate');
     document.querySelector('.page-wrapper').classList.remove('blur');
 });
 
 /* Закрывать модальное окно регулировки света по кнопке Закрыть */
 document.querySelector('.light-modal .close-modal').addEventListener('click', function() {
     document.querySelector('.light-modal').classList.remove('visible');
+    document.querySelector('.light-modal .modal-wrapper').classList.remove('animate');
     document.querySelector('.page-wrapper').classList.remove('blur');
 });
 
 /* Закрывать модальное окно регулировки света по кнопке Применить */
 document.querySelector('.light-modal .save-modal').addEventListener('click', function() {
     document.querySelector('.light-modal').classList.remove('visible');
+    document.querySelector('.light-modal .modal-wrapper').classList.remove('animate');
     document.querySelector('.page-wrapper').classList.remove('blur');
 });
 
 /* Закрывать модальное окно регулировки температуры пола по кнопке Закрыть */
 document.querySelector('.floor-modal .close-modal').addEventListener('click', function() {
     document.querySelector('.floor-modal').classList.remove('visible');
+    document.querySelector('.floor-modal .modal-wrapper').classList.remove('animate');
     document.querySelector('.page-wrapper').classList.remove('blur');
 });
 
 /* Закрывать модальное окно регулировки температуры пола по кнопке Применить */
 document.querySelector('.floor-modal .save-modal').addEventListener('click', function() {
     document.querySelector('.floor-modal').classList.remove('visible');
+    document.querySelector('.floor-modal .modal-wrapper').classList.remove('animate');
     document.querySelector('.page-wrapper').classList.remove('blur');
 });
 

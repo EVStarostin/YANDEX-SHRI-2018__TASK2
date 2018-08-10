@@ -530,17 +530,19 @@ html {
     .modal-wrapper {
         width: 630px;
         position: absolute;
-        left: 50%;
-        top: 50%;
         transform: scale(.3);
+        transform-origin: top left;
+        transition: all .3s ease-out;
+
+        &.animate {
+            transform: translate(-50%, -50%) scale(1);
+            left: 50%;
+            top: 50%;
+        }
     }
 
     &.visible {
         display: flex;
-
-        .modal-wrapper {
-            transform: translate(-50%, -50%) scale(1);
-        }
     }
 
     .modal-content {

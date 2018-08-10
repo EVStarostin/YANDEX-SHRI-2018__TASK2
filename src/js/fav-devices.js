@@ -103,7 +103,7 @@ for (var i = 0; i < favDevices.length; i++) {
                 modal.querySelector('.modal-wrapper').style.cssText = '';
                 modal.querySelector('.modal-wrapper').classList.add('animate');
                 document.querySelector('.page-wrapper').classList.add('blur');
-            }, 10);
+            }, 50);
 
         } else if (this.parentElement.dataset.type === 'light') {
             var modal = document.querySelector('.light-modal');
@@ -124,7 +124,7 @@ for (var i = 0; i < favDevices.length; i++) {
                 modal.querySelector('.modal-wrapper').style.cssText = '';
                 modal.querySelector('.modal-wrapper').classList.add('animate');
                 document.querySelector('.page-wrapper').classList.add('blur');
-            }, 10);
+            }, 50);
 
         } else if (this.parentElement.dataset.type === 'floor') {
             var modal = document.querySelector('.floor-modal');
@@ -145,7 +145,7 @@ for (var i = 0; i < favDevices.length; i++) {
                 modal.querySelector('.modal-wrapper').style.cssText = '';
                 modal.querySelector('.modal-wrapper').classList.add('animate');
                 document.querySelector('.page-wrapper').classList.add('blur');
-            }, 10);
+            }, 50);
         }
     });
 }

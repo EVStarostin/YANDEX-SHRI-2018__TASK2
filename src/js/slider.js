@@ -1,18 +1,24 @@
 /* Обработчик движения мыши */
-function handleMouseMove(initialPositionX) {
-    var prevPositionX = initialPositionX;
+function handleMouseMove(initialPosition) {
+    var prevPosition = initialPosition;
     
     return function(e) {
-        var nextPositionX = e.clientX;
-        this.scrollLeft += prevPositionX - nextPositionX;
-        prevPositionX = nextPositionX;
+        var nextPosition = { x: e.clientX, y: e.clientY };
+
+        if (document.documentElement.clientWidth < 992) {
+            this.scrollTop += prevPosition.y - nextPosition.y;
+        } else {
+            this.scrollLeft += prevPosition.x - nextPosition.x;
+        }
+        
+        prevPosition = nextPosition;
     }
 }
 
 /* Вешаем обработчик движения мыши на событие mousedown на регуляторе температуры */
 document.querySelector('.temp-modal .handler').addEventListener('mousedown', function(e) {
-    var initialPositionX = e.clientX;
-    document.querySelector('.temp-modal .inner').onmousemove = handleMouseMove(initialPositionX);
+    var initialPosition = { x: e.clientX, y: e.clientY };
+    document.querySelector('.temp-modal .inner').onmousemove = handleMouseMove(initialPosition);
 });
 
 /* Убираем обработчик движения мыши на событие mouseup на регуляторе температуры */
@@ -22,8 +28,8 @@ document.addEventListener('mouseup', function () {
 
 /* Вешаем обработчик движения мыши на событие mousedown на регуляторе света */
 document.querySelector('.light-modal .handler').addEventListener('mousedown', function(e) {
-    var initialPositionX = e.clientX;
-    document.querySelector('.light-modal .inner').onmousemove = handleMouseMove(initialPositionX);
+    var initialPosition = { x: e.clientX, y: e.clientY };
+    document.querySelector('.light-modal .inner').onmousemove = handleMouseMove(initialPosition);
 });
 
 /* Убираем обработчик движения мыши на событие mouseup на регуляторе света */

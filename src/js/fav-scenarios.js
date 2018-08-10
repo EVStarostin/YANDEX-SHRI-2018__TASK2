@@ -23,7 +23,7 @@ document.querySelector('.section-scenarios .right').addEventListener('click', fu
     setTimeout(function() {
         document.querySelector('.scenarios').scrollTop += 346;
         document.querySelector('.scenarios').style.opacity = '1';
-    }, 1);
+    }, 200);
 });
 
 /* При скролле меняем прозрачность кнопок если дальше скролить нельзя */

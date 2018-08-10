@@ -265,6 +265,10 @@ html {
                 margin-bottom: 20px;
             }
 
+            &:nth-child(3) .billet {
+                background-size: 0%;
+            }
+
             &:nth-child(3) .billet:after {
                 content: '';
                 position: absolute;
@@ -276,6 +280,10 @@ html {
                 top: 13px;
                 transition: opacity .2s ease-in-out;
             }
+        }
+
+        &.scrolled li:nth-child(3) .billet {
+            background-size: auto;
         }
 
         &.scrolled li:nth-child(3) .billet:after {
@@ -734,13 +742,11 @@ html {
                 z-index: 2;
             }
 
-            &:after {
-                content: attr(data-after);
+            .displayTemp {
                 padding-left: 50px;
                 line-height: 220px;
                 height: 100%;
                 width: 100%;
-                display: block;
                 background: url(../img/termo.svg);
                 position: absolute;
                 z-index: 3;
@@ -751,6 +757,8 @@ html {
                 font-size: 66px;
                 color: #333333;
                 box-sizing: border-box;
+                cursor: pointer;
+                user-select: none;
             }
 
             .pointer {

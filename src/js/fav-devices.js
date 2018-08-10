@@ -94,6 +94,19 @@ for (var i = 0; i < favDevices.length; i++) {
                 modal.querySelector('.icon-temp').classList.remove('powerOn');
                 modal.querySelector('.icon-temp').classList.add('powerOff');
             }
+            modal.querySelector('.modal-wrapper').style.left = this.offsetLeft + 'px';
+            modal.querySelector('.modal-wrapper').style.top = this.offsetTop + 'px';
+            modal.querySelector('.modal-wrapper').style.transform = 'scale(.3)';
+            modal.querySelector('.modal-wrapper').style.transformOrigin = 'top left';
+            modal.querySelector('.modal-wrapper').style.transition = 'all .3s ease-out';
+
+            setTimeout(function() {
+                modal.querySelector('.modal-wrapper').style.left = '50%';
+                modal.querySelector('.modal-wrapper').style.top = '50%';
+                modal.querySelector('.modal-wrapper').style.overflow = 'auto';
+                modal.querySelector('.modal-wrapper').style.transform = 'translate(-50%, -50%) scale(1)';
+            }, 1);
+
             modal.classList.add('visible');
             document.querySelector('.page-wrapper').classList.add('blur');
         } else if (this.parentElement.dataset.type === 'light') {

@@ -17,6 +17,7 @@ html {
                 filter: blur(3px);
                 overflow: hidden;
                 max-height: 100%;
+                transition: filter .3s ease-out;
             }
         }
     }
@@ -526,16 +527,20 @@ html {
     justify-content: center;
     align-items: center;
 
-    &.visible {
-        display: flex;
-    }
-
     .modal-wrapper {
         width: 630px;
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: scale(.3);
+    }
+
+    &.visible {
+        display: flex;
+
+        .modal-wrapper {
+            transform: translate(-50%, -50%) scale(1);
+        }
     }
 
     .modal-content {

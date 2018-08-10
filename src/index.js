@@ -2,4 +2,5 @@ import 'normalize.css';
 import './less/main.less';
 import './less/retina.less';
 import './less/mobile.less';
-import './js/script.js'
+import './js/main.js'
+

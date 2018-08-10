@@ -1,4 +1,5 @@
-import './round-slider.js'
+import './round-slider.js';
+import './slider.js';
 
 /* Фильтр в разделе избранные устройства */
 var filterButtons = document.querySelectorAll('.section-fav-devices .filter button');

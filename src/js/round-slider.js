@@ -83,6 +83,10 @@ function returnHandleMouseMove(cursorPosition) {
         var prevPositionAngle = getCursorAngle(prevPosition);
         var nextPositionAngle = getCursorAngle(nextPosition);
 
+        console.log(nextPosition, prevPosition);
+        console.log(nextPositionAngle, prevPositionAngle);
+        console.log('RESULT: ', nextPositionAngle - prevPositionAngle);
+
         var angle = (nextPositionAngle - prevPositionAngle);
         prevPosition = nextPosition;
         
@@ -123,8 +127,8 @@ var roundSlider = document.querySelector('.round-slider');
 
 roundSlider.addEventListener('touchstart', function (e) {
     var cursorPosition = {
-        x: e.target.getBoundingClientRect().left - e.targetTouches[0].pageX,
-        y: e.target.getBoundingClientRect().top - e.targetTouches[0].pageY
+        x: e.targetTouches[0].pageX - e.target.getBoundingClientRect().left,
+        y: e.targetTouches[0].pageY - e.target.getBoundingClientRect().top
     }
     roundSlider.ontouchmove = returnHandleMouseMove(cursorPosition);
 });

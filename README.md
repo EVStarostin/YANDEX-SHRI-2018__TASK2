@@ -1,8 +1,7 @@
 # Задание 2 — сверстать макет
 
 ## РЕШЕНИЕ
-### Хостинг (Gh-Pages)  
-Опубликованная версия доступна на github pages [https://evstarostin.github.io/YANDEX-SHRI-2018__TASK2/](https://evstarostin.github.io/YANDEX-SHRI-2018__TASK2/) 
+Для удобства залил сверстанный сайт на github pages [https://evstarostin.github.io/YANDEX-SHRI-2018__TASK2/](https://evstarostin.github.io/YANDEX-SHRI-2018__TASK2/) 
 
 ### Краткое описание
 Для того, чтобы открыть **модальное окно регулировки *температуры/света*** нужно кликнуть на устройство в разделе *"Избранные устройства"*.  

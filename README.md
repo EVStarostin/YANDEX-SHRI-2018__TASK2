@@ -42,5 +42,5 @@
 - ***round-slider.js*** - управление регулятором температуры теплого пола;  
 
 ### Запуск
-`npm run start` - запустить webpack-dev-server можно введя в терминале  
+`npm run start` - запустить webpack-dev-server  
 `npm run build` - собрать проект  

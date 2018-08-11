@@ -83,10 +83,6 @@ function returnHandleMouseMove(cursorPosition) {
         var prevPositionAngle = getCursorAngle(prevPosition);
         var nextPositionAngle = getCursorAngle(nextPosition);
 
-        console.log(nextPosition, prevPosition);
-        console.log(nextPositionAngle, prevPositionAngle);
-        console.log('RESULT: ', nextPositionAngle - prevPositionAngle);
-
         var angle = (nextPositionAngle - prevPositionAngle);
         prevPosition = nextPosition;
         

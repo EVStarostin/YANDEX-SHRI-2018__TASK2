@@ -45,5 +45,5 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'main.css'
     })
-  ]
+  ].filter(Boolean)
 }

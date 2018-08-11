@@ -1,6 +1,8 @@
 # Задание 2 — сверстать макет
 
 ## РЕШЕНИЕ
+### Хостинг (Gh-Pages)  
+Опубликованная версия доступна на github pages [https://evstarostin.github.io/YANDEX-SHRI-2018__TASK2/](https://evstarostin.github.io/YANDEX-SHRI-2018__TASK2/) 
 
 ### Краткое описание
 Для того, чтобы открыть **модальное окно регулировки *температуры/света*** нужно кликнуть на устройство в разделе *"Избранные устройства"*.  
@@ -43,5 +45,3 @@
 Заустить webpack-dev-server можно введя в терминале: `npm run start`   
 Собрать проект: `npm run build`    
 
-### Хостинг (Gh-Pages)  
-Опубликованная версия доступна на github pages [https://evstarostin.github.io/YANDEX-SHRI-2018__TASK2/](https://evstarostin.github.io/YANDEX-SHRI-2018__TASK2/) 

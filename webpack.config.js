@@ -38,7 +38,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    devMode ? null : new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       template: "./src/index.html"
     }),

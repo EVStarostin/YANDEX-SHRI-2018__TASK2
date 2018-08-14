@@ -9,7 +9,7 @@ MAX_TEMPERATURE = 25;
 // Предзагрузка svg картинки для фона крутилки
 window.addEventListener('load', function() {
     var tempoImg = new Image();
-    tempoImg.src = "../img/termo.svg";
+    tempoImg.src = "./../img/termo.svg";
     tempoImg.onload = function() {
         document.querySelector('.round-slider .displayTemp').style.css = 'url(' + tempoImg.src + ')';
     }

@@ -6,6 +6,15 @@ MAX_ANGLE = 330,
 MIN_TEMPERATURE = 10,
 MAX_TEMPERATURE = 25;
 
+// Предзагрузка svg картинки для фона крутилки
+window.addEventListener('load', function() {
+    var tempoImg = new Image();
+    tempoImg.src = "../img/termo.svg";
+    tempoImg.onload = function() {
+        document.querySelector('.round-slider .displayTemp').style.css = 'url(' + tempoImg.src + ')';
+    }
+});
+
 // Функция для отображения температуры на регуляторе
 // Первым аргументом принимает элемент, а вторым угол
 function displayTemperature(element, angle) {

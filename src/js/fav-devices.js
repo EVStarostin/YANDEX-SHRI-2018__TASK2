@@ -96,8 +96,8 @@ for (var i = 0; i < favDevices.length; i++) {
                 modal.querySelector('.icon-temp').classList.add('powerOff');
             }
 
-            modal.querySelector('.modal-wrapper').style.left = this.offsetLeft + 'px';
-            modal.querySelector('.modal-wrapper').style.top = this.offsetTop + 'px';
+            modal.querySelector('.modal-wrapper').style.left = this.getBoundingClientRect().left + 'px';
+            modal.querySelector('.modal-wrapper').style.top = this.getBoundingClientRect().top + 'px';
             modal.classList.add('visible');
             setTimeout(function() {
                 modal.querySelector('.modal-wrapper').style.cssText = '';
@@ -117,8 +117,8 @@ for (var i = 0; i < favDevices.length; i++) {
                 modal.querySelector('.icon-light').classList.add('powerOff');
             }
            
-            modal.querySelector('.modal-wrapper').style.left = this.offsetLeft + 'px';
-            modal.querySelector('.modal-wrapper').style.top = this.offsetTop + 'px';
+            modal.querySelector('.modal-wrapper').style.left = this.getBoundingClientRect().left + 'px';
+            modal.querySelector('.modal-wrapper').style.top = this.getBoundingClientRect().top + 'px';
             modal.classList.add('visible');
             setTimeout(function() {
                 modal.querySelector('.modal-wrapper').style.cssText = '';
@@ -138,8 +138,8 @@ for (var i = 0; i < favDevices.length; i++) {
                 modal.querySelector('.icon-temp').classList.add('powerOff');
             }
             
-            modal.querySelector('.modal-wrapper').style.left = this.offsetLeft + 'px';
-            modal.querySelector('.modal-wrapper').style.top = this.offsetTop + 'px';
+            modal.querySelector('.modal-wrapper').style.left = this.getBoundingClientRect().left + 'px';
+            modal.querySelector('.modal-wrapper').style.top = this.getBoundingClientRect().top + 'px';
             modal.classList.add('visible');
             setTimeout(function() {
                 modal.querySelector('.modal-wrapper').style.cssText = '';

@@ -100,8 +100,8 @@ for (var i = 0; i < favDevices.length; i++) {
             modal.querySelector('.modal-wrapper').style.top = this.getBoundingClientRect().top + 'px';
             modal.classList.add('visible');
             setTimeout(function() {
+                modal.classList.add('animate');
                 modal.querySelector('.modal-wrapper').style.cssText = '';
-                modal.querySelector('.modal-wrapper').classList.add('animate');
                 document.querySelector('.page-wrapper').classList.add('blur');
             }, 50);
 
@@ -121,8 +121,8 @@ for (var i = 0; i < favDevices.length; i++) {
             modal.querySelector('.modal-wrapper').style.top = this.getBoundingClientRect().top + 'px';
             modal.classList.add('visible');
             setTimeout(function() {
+                modal.classList.add('animate');
                 modal.querySelector('.modal-wrapper').style.cssText = '';
-                modal.querySelector('.modal-wrapper').classList.add('animate');
                 document.querySelector('.page-wrapper').classList.add('blur');
             }, 50);
 
@@ -142,8 +142,8 @@ for (var i = 0; i < favDevices.length; i++) {
             modal.querySelector('.modal-wrapper').style.top = this.getBoundingClientRect().top + 'px';
             modal.classList.add('visible');
             setTimeout(function() {
+                modal.classList.add('animate');
                 modal.querySelector('.modal-wrapper').style.cssText = '';
-                modal.querySelector('.modal-wrapper').classList.add('animate');
                 document.querySelector('.page-wrapper').classList.add('blur');
             }, 50);
         }
@@ -153,42 +153,42 @@ for (var i = 0; i < favDevices.length; i++) {
 /* Закрывать модальное окно регулировки температуры по кнопке Закрыть */
 document.querySelector('.temp-modal .close-modal').addEventListener('click', function() {
     document.querySelector('.temp-modal').classList.remove('visible');
-    document.querySelector('.temp-modal .modal-wrapper').classList.remove('animate');
+    document.querySelector('.temp-modal').classList.remove('animate');
     document.querySelector('.page-wrapper').classList.remove('blur');
 });
 
 /* Закрывать модальное окно регулировки температуры по кнопке Применить */
 document.querySelector('.temp-modal .save-modal').addEventListener('click', function() {
     document.querySelector('.temp-modal').classList.remove('visible');
-    document.querySelector('.temp-modal .modal-wrapper').classList.remove('animate');
+    document.querySelector('.temp-modal').classList.remove('animate');
     document.querySelector('.page-wrapper').classList.remove('blur');
 });
 
 /* Закрывать модальное окно регулировки света по кнопке Закрыть */
 document.querySelector('.light-modal .close-modal').addEventListener('click', function() {
     document.querySelector('.light-modal').classList.remove('visible');
-    document.querySelector('.light-modal .modal-wrapper').classList.remove('animate');
+    document.querySelector('.light-modal').classList.remove('animate');
     document.querySelector('.page-wrapper').classList.remove('blur');
 });
 
 /* Закрывать модальное окно регулировки света по кнопке Применить */
 document.querySelector('.light-modal .save-modal').addEventListener('click', function() {
     document.querySelector('.light-modal').classList.remove('visible');
-    document.querySelector('.light-modal .modal-wrapper').classList.remove('animate');
+    document.querySelector('.light-modal').classList.remove('animate');
     document.querySelector('.page-wrapper').classList.remove('blur');
 });
 
 /* Закрывать модальное окно регулировки температуры пола по кнопке Закрыть */
 document.querySelector('.floor-modal .close-modal').addEventListener('click', function() {
     document.querySelector('.floor-modal').classList.remove('visible');
-    document.querySelector('.floor-modal .modal-wrapper').classList.remove('animate');
+    document.querySelector('.floor-modal').classList.remove('animate');
     document.querySelector('.page-wrapper').classList.remove('blur');
 });
 
 /* Закрывать модальное окно регулировки температуры пола по кнопке Применить */
 document.querySelector('.floor-modal .save-modal').addEventListener('click', function() {
     document.querySelector('.floor-modal').classList.remove('visible');
-    document.querySelector('.floor-modal .modal-wrapper').classList.remove('animate');
+    document.querySelector('.floor-modal').classList.remove('animate');
     document.querySelector('.page-wrapper').classList.remove('blur');
 });
 

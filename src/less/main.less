@@ -348,12 +348,16 @@ html {
                 box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.90);
             }
 
-            &:hover .billet {
-                background-color: #fff;
-                box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.90);
-                border-radius: @border-radius-primary;
-                cursor: pointer;
-            }
+            &:hover 
+                {
+                    cursor: pointer;
+
+                    .billet {
+                        background-color: #fff;
+                        box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.90);
+                        border-radius: @border-radius-primary;
+                    }
+                }
 
             &:active .billet {
                 background-color: #fff;
@@ -469,11 +473,14 @@ html {
                     box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.90);
                 }
 
-                &:hover .billet {
-                    background-color: #fff;
-                    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.90);
-                    border-radius: @border-radius-primary;
+                &:hover {
                     cursor: pointer;
+
+                    .billet {
+                        background-color: #fff;
+                        box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.90);
+                        border-radius: @border-radius-primary;
+                    }
                 }
     
                 &:active .billet {

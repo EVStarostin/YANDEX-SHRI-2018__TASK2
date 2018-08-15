@@ -91,9 +91,9 @@ function showModal(modal, that) {
         pageWrapper = document.querySelector('.page-wrapper');
     var centerX = document.documentElement.clientWidth / 2;
     var centerY = document.documentElement.clientHeight / 2;
-    var X = that.getBoundingClientRect().left,
-        Y = that.getBoundingClientRect().top;
-    modalWrapper.style.transform = 'translate('+(X-centerX)+'px, '+(Y-centerY)+'px) scale(.3)';
+    var X = that.getBoundingClientRect().left - centerX,
+        Y = that.getBoundingClientRect().top - centerY;
+    modalWrapper.style.transform = 'translate('+X+'px, '+Y+'px) scale(.3)';
     modal.classList.add('visible');
     setTimeout(function() {
         modalWrapper.style.cssText = '';

@@ -31,6 +31,6 @@
     "normalize.css": "^8.0.0"
   },
   "browserslist": [
-    "last 4 versions"
+    "last 2 versions"
   ]
 }

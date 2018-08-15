@@ -89,8 +89,11 @@ var favDevices = document.querySelectorAll('.fav-devices button');
 function showModal(modal, that) {
     var modalWrapper = modal.querySelector('.modal-wrapper'),
         pageWrapper = document.querySelector('.page-wrapper');
-    modalWrapper.style.left = that.getBoundingClientRect().left + 'px';
-    modalWrapper.style.top = that.getBoundingClientRect().top + 'px';
+    var centerX = document.documentElement.clientWidth / 2;
+    var centerY = document.documentElement.clientHeight / 2;
+    var X = that.getBoundingClientRect().left,
+        Y = that.getBoundingClientRect().top;
+    modalWrapper.style.transform = 'translate('+(X-centerX)+'px, '+(Y-centerY)+'px) scale(.3)';
     modal.classList.add('visible');
     setTimeout(function() {
         modalWrapper.style.cssText = '';

@@ -18,6 +18,10 @@ html {
                 filter: blur(3px);
                 overflow: hidden;
                 max-height: 100%;
+
+                .page_header {
+                    z-index: 0;
+                }
             }
         }
     }
@@ -549,9 +553,11 @@ html {
     .modal-wrapper {
         width: 630px;
         position: absolute;
-        transform: scale(.3);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
         transform-origin: top left;
-        transition: transform .3s ease-out, left .3s ease-out, top .3s ease-out;
+        transition: transform .3s ease-out;
     }
 
     &.visible {
@@ -559,12 +565,6 @@ html {
 
         &.animate {
             opacity: 1;
-
-            .modal-wrapper {
-                transform: translate(-50%, -50%) scale(1);
-                top: 50%;
-                left: 50%;
-            }
         }
     }
 
@@ -645,7 +645,6 @@ html {
             }
 
             li {
-                display: inline-block;
                 margin-right: 5px;
 
                 &:last-child {

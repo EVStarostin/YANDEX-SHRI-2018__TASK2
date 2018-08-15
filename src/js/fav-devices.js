@@ -53,15 +53,18 @@ document.querySelector('.section-fav-devices .right').addEventListener('click', 
 
 /* При скролле меняем прозрачность кнопок если дальше скролить нельзя */
 document.querySelector('.fav-devices').addEventListener('scroll', function() {
+    var leftBtn = document.querySelector('.section-fav-devices .left'),
+        rightBtn = document.querySelector('.section-fav-devices .right');
+
     if (this.scrollLeft <= 0) {
-        document.querySelector('.section-fav-devices .left').style.opacity = '.3';
+        leftBtn.style.opacity = '.3';
     } else {
-        document.querySelector('.section-fav-devices .left').style.opacity = '1';
+        leftBtn.style.opacity = '1';
     }
     if (this.clientWidth + this.scrollLeft >= this.scrollWidth) {
-        document.querySelector('.section-fav-devices .right').style.opacity = '.3';
+        rightBtn.style.opacity = '.3';
     } else {
-        document.querySelector('.section-fav-devices .right').style.opacity = '1';
+        rightBtn.style.opacity = '1';
     }
 });
 
@@ -82,114 +85,108 @@ for (var i = 0; i < modes.length; i++) {
 /* При нажатии на плашку с устройством в разделе Избранные устройства открывается 
 модальное окно, куда подставляется название устройства, статус работы и иконка */
 var favDevices = document.querySelectorAll('.fav-devices button');
+
+function showModal(modal, that) {
+    var modalWrapper = modal.querySelector('.modal-wrapper'),
+        pageWrapper = document.querySelector('.page-wrapper');
+    modalWrapper.style.left = that.getBoundingClientRect().left + 'px';
+    modalWrapper.style.top = that.getBoundingClientRect().top + 'px';
+    modal.classList.add('visible');
+    setTimeout(function() {
+        modalWrapper.style.cssText = '';
+        modal.classList.add('animate');
+        pageWrapper.classList.add('blur');
+    }, 100);
+}
+
 for (var i = 0; i < favDevices.length; i++) {
     favDevices[i].addEventListener('click', function() {
         if (this.parentElement.dataset.type === 'temp') {
             var modal = document.querySelector('.temp-modal');
+            var icon = modal.querySelector('.icon-temp');
             modal.querySelector('.name').innerText = this.querySelector('.name').innerText;
             modal.querySelector('.status').innerText = this.querySelector('.action').innerText;
             if (this.parentElement.dataset.power === 'on') {
-                modal.querySelector('.icon-temp').classList.remove('powerOff');
-                modal.querySelector('.icon-temp').classList.add('powerOn');
+                icon.classList.remove('powerOff');
+                icon.classList.add('powerOn');
             } else {
-                modal.querySelector('.icon-temp').classList.remove('powerOn');
-                modal.querySelector('.icon-temp').classList.add('powerOff');
+                icon.classList.remove('powerOn');
+                icon.classList.add('powerOff');
             }
-
-            modal.querySelector('.modal-wrapper').style.left = this.getBoundingClientRect().left + 'px';
-            modal.querySelector('.modal-wrapper').style.top = this.getBoundingClientRect().top + 'px';
-            modal.classList.add('visible');
-            setTimeout(function() {
-                modal.classList.add('animate');
-                modal.querySelector('.modal-wrapper').style.cssText = '';
-                document.querySelector('.page-wrapper').classList.add('blur');
-            }, 50);
-
+            var that = this
+            showModal(modal, that);
         } else if (this.parentElement.dataset.type === 'light') {
             var modal = document.querySelector('.light-modal');
+            var icon = modal.querySelector('.icon-light');
             modal.querySelector('.name').innerText = this.querySelector('.name').innerText;
             modal.querySelector('.status').innerText = this.querySelector('.action').innerText;
             if (this.parentElement.dataset.power === 'on') {
-                modal.querySelector('.icon-light').classList.remove('powerOff');
-                modal.querySelector('.icon-light').classList.add('powerOn');
+                icon.classList.remove('powerOff');
+                icon.classList.add('powerOn');
             } else {
-                modal.querySelector('.icon-light').classList.remove('powerOn');
-                modal.querySelector('.icon-light').classList.add('powerOff');
+                icon.classList.remove('powerOn');
+                icon.classList.add('powerOff');
             }
-           
-            modal.querySelector('.modal-wrapper').style.left = this.getBoundingClientRect().left + 'px';
-            modal.querySelector('.modal-wrapper').style.top = this.getBoundingClientRect().top + 'px';
-            modal.classList.add('visible');
-            setTimeout(function() {
-                modal.classList.add('animate');
-                modal.querySelector('.modal-wrapper').style.cssText = '';
-                document.querySelector('.page-wrapper').classList.add('blur');
-            }, 50);
-
+            var that = this
+            showModal(modal, that);
         } else if (this.parentElement.dataset.type === 'floor') {
             var modal = document.querySelector('.floor-modal');
+            var icon = modal.querySelector('.icon-temp');
             modal.querySelector('.name').innerText = this.querySelector('.name').innerText;
             modal.querySelector('.status').innerText = this.querySelector('.action').innerText;
             if (this.parentElement.dataset.power === 'on') {
-                modal.querySelector('.icon-temp').classList.remove('powerOff');
-                modal.querySelector('.icon-temp').classList.add('powerOn');
+                icon.classList.remove('powerOff');
+                icon.classList.add('powerOn');
             } else {
-                modal.querySelector('.icon-temp').classList.remove('powerOn');
-                modal.querySelector('.icon-temp').classList.add('powerOff');
+                icon.classList.remove('powerOn');
+                icon.classList.add('powerOff');
             }
-            
-            modal.querySelector('.modal-wrapper').style.left = this.getBoundingClientRect().left + 'px';
-            modal.querySelector('.modal-wrapper').style.top = this.getBoundingClientRect().top + 'px';
-            modal.classList.add('visible');
-            setTimeout(function() {
-                modal.classList.add('animate');
-                modal.querySelector('.modal-wrapper').style.cssText = '';
-                document.querySelector('.page-wrapper').classList.add('blur');
-            }, 50);
+            var that = this
+            showModal(modal, that);
         }
     });
 }
 
 /* Закрывать модальное окно регулировки температуры по кнопке Закрыть */
-document.querySelector('.temp-modal .close-modal').addEventListener('click', function() {
-    document.querySelector('.temp-modal').classList.remove('visible');
-    document.querySelector('.temp-modal').classList.remove('animate');
+function closeModal(modal) {
+    modal.classList.remove('visible');
+    modal.classList.remove('animate');
     document.querySelector('.page-wrapper').classList.remove('blur');
+}
+
+document.querySelector('.temp-modal .close-modal').addEventListener('click', function() {
+    var modal = document.querySelector('.temp-modal');
+    closeModal(modal);
 });
 
 /* Закрывать модальное окно регулировки температуры по кнопке Применить */
 document.querySelector('.temp-modal .save-modal').addEventListener('click', function() {
-    document.querySelector('.temp-modal').classList.remove('visible');
-    document.querySelector('.temp-modal').classList.remove('animate');
-    document.querySelector('.page-wrapper').classList.remove('blur');
+    var modal = document.querySelector('.temp-modal');
+    closeModal(modal);
 });
 
 /* Закрывать модальное окно регулировки света по кнопке Закрыть */
 document.querySelector('.light-modal .close-modal').addEventListener('click', function() {
-    document.querySelector('.light-modal').classList.remove('visible');
-    document.querySelector('.light-modal').classList.remove('animate');
-    document.querySelector('.page-wrapper').classList.remove('blur');
+    var modal = document.querySelector('.light-modal');
+    closeModal(modal);
 });
 
 /* Закрывать модальное окно регулировки света по кнопке Применить */
 document.querySelector('.light-modal .save-modal').addEventListener('click', function() {
-    document.querySelector('.light-modal').classList.remove('visible');
-    document.querySelector('.light-modal').classList.remove('animate');
-    document.querySelector('.page-wrapper').classList.remove('blur');
+    var modal = document.querySelector('.light-modal');
+    closeModal(modal);
 });
 
 /* Закрывать модальное окно регулировки температуры пола по кнопке Закрыть */
 document.querySelector('.floor-modal .close-modal').addEventListener('click', function() {
-    document.querySelector('.floor-modal').classList.remove('visible');
-    document.querySelector('.floor-modal').classList.remove('animate');
-    document.querySelector('.page-wrapper').classList.remove('blur');
+    var modal = document.querySelector('.floor-modal');
+    closeModal(modal);
 });
 
 /* Закрывать модальное окно регулировки температуры пола по кнопке Применить */
 document.querySelector('.floor-modal .save-modal').addEventListener('click', function() {
-    document.querySelector('.floor-modal').classList.remove('visible');
-    document.querySelector('.floor-modal').classList.remove('animate');
-    document.querySelector('.page-wrapper').classList.remove('blur');
+    var modal = document.querySelector('.floor-modal');
+    closeModal(modal);
 });
 
 /* Показывать/прятать меню фильтра в мобильной версии */

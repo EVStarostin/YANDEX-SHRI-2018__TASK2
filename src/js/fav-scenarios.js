@@ -10,36 +10,40 @@ window.addEventListener('load', function() {
 
 /* Обработка нажатия на кнопку влево в разделе избранные устройства */
 document.querySelector('.section-scenarios .left').addEventListener('click', function() {
-    document.querySelector('.scenarios').style.opacity = '0';
+    var scenarios = document.querySelector('.scenarios');
+    scenarios.style.opacity = '0';
     setTimeout(function() {
-        document.querySelector('.scenarios').scrollTop -= 346;
-        document.querySelector('.scenarios').style.opacity = '1';
+        scenarios.scrollTop -= 346;
+        scenarios.style.opacity = '1';
     }, 200);
 });
 
 /* Обработка нажатия на кнопку вправо в разделе избранные устройства */
 document.querySelector('.section-scenarios .right').addEventListener('click', function() {
-    document.querySelector('.scenarios').style.opacity = '0';
+    var scenarios = document.querySelector('.scenarios');
+    scenarios.style.opacity = '0';
     setTimeout(function() {
-        document.querySelector('.scenarios').scrollTop += 346;
-        document.querySelector('.scenarios').style.opacity = '1';
+        scenarios.scrollTop += 346;
+        scenarios.style.opacity = '1';
     }, 200);
 });
 
 /* При скролле меняем прозрачность кнопок если дальше скролить нельзя */
 document.querySelector('.scenarios').addEventListener('scroll', function() {
+    var leftBtn = document.querySelector('.section-scenarios .left'),
+        rightBtn =  document.querySelector('.section-scenarios .right');
     if (this.scrollTop <= 0) {
-        document.querySelector('.section-scenarios .left').style.opacity = '.3';
-        document.querySelector('.section-scenarios .left').disabled = true;
+        leftBtn.style.opacity = '.3';
+        leftBtn.disabled = true;
     } else {
-        document.querySelector('.section-scenarios .left').style.opacity = '1';
-        document.querySelector('.section-scenarios .left').disabled = false;
+        leftBtn.style.opacity = '1';
+        leftBtn.disabled = false;
     }
     if (this.clientHeight + this.scrollTop >= this.scrollHeight) {
-        document.querySelector('.section-scenarios .right').style.opacity = '.3';
-        document.querySelector('.section-scenarios .right').disabled = true;
+        rightBtn.style.opacity = '.3';
+        rightBtn.disabled = true;
     } else {
-        document.querySelector('.section-scenarios .right').style.opacity = '1';
-        document.querySelector('.section-scenarios .right').disabled = false;
+        rightBtn.style.opacity = '1';
+        rightBtn.disabled = false;
     }
 });

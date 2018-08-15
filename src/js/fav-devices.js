@@ -89,8 +89,8 @@ var favDevices = document.querySelectorAll('.fav-devices button');
 function showModal(modal, that) {
     var modalWrapper = modal.querySelector('.modal-wrapper'),
         pageWrapper = document.querySelector('.page-wrapper');
-    var centerX = document.documentElement.clientWidth / 2;
-    var centerY = document.documentElement.clientHeight / 2;
+    var centerX = document.documentElement.clientWidth / 2,
+        centerY = document.documentElement.clientHeight / 2;
     var X = that.getBoundingClientRect().left - centerX,
         Y = that.getBoundingClientRect().top - centerY;
     modalWrapper.style.transform = 'translate('+X+'px, '+Y+'px) scale(.3)';
